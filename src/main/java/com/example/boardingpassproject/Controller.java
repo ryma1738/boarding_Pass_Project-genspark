@@ -4,6 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Controller {
 
     @FXML
@@ -103,14 +107,40 @@ public class Controller {
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
             return;
-        } else if () {
-            
         }
         submitForm();
     }
 
-    private void submitForm() {
+    public void submitForm() {
         // compile contents into files and generate ticket
+        createTicket();
+        writeOverTicket();
+    }
+
+    public void createTicket() {
+        try {
+            File ticket = new File("Your_Boarding_Ticket.txt");
+            if (ticket.createNewFile()) {
+                System.out.println("File created: " + ticket.getName());
+            } else {
+                System.out.println("File already exists or file name taken");
+            }
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+            e.printStackTrace();
+        }
+    }
+
+    public void writeOverTicket() {
+        try {
+            FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
+            writer.write("\nBoarding Ticket\nName: " + name + ",\nEmail: " + email + ",\nPhone Number: " + phoneNumber + ",\nGender: " + genders + ",\nAge: " + age + ",\nDestination: " + destinationName + ",\nDeparture Time: " + departureTime);
+            writer.close();
+            System.out.println("Successfully wrote to file.");
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+            e.printStackTrace();
+        }
     }
 
     private String generateTicketNum() {

@@ -1,0 +1,8 @@
+Boarding Ticket
+Name: Test,
+Email: test@gmail.com,
+Phone Number: 123-456-7890,
+Gender: Male,
+Age: 22,
+Destination: Chicago,
+Departure Time: null
