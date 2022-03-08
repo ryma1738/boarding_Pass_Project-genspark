@@ -4,10 +4,46 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class Controller {
-    public String errorMessage;
     @FXML
-    private Label welcomeText;
+    public String errorMessage;
 
+
+    //onChange event handlers
+    @FXML
+    public void nameChange() {
+
+    }
+
+    @FXML 
+    public void changeEmail() {
+
+    }
+
+    @FXML
+    public void changePhoneNum() {
+
+    }
+
+    @FXML
+    public void changeGender() {
+
+    }
+
+    @FXML
+    public void changeAge() {
+
+    }
+
+    @FXML
+    public void changeDestination() {
+
+    }
+
+    @FXML
+    public void changeDepartureTime() {
+
+    }
+    //End of onChange Event handlers
     @FXML
     public void checkFormContents() {
 
@@ -17,5 +53,10 @@ public class Controller {
 
     private void submitForm() {
         // compile contents into files and generate ticket
+    }
+
+    private String generateTicketNum () {
+        //generate random ticket number that does not match another ticket num
+        return "";
     }
 }
