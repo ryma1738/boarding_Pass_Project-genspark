@@ -9,6 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.boardingpassproject.Controller">
     <children>
+        <Label layoutX="151.0" layoutY="34.0" text="Ticket Generator" textAlignment="CENTER">
         <TextField fx:id="ageField" alignment="CENTER" layoutX="121.0" layoutY="235.0" onKeyTyped="#changeAge" promptText="Age" />
         <TextField fx:id="nameField" alignment="CENTER" layoutX="121.0" layoutY="75.0" onKeyTyped="#changeName" promptText="Name" />
         <TextField fx:id="genderField" alignment="CENTER" layoutX="122.0" layoutY="195.0" onKeyTyped="#changeGender" promptText="Gender" />
@@ -19,8 +20,8 @@
          <font>
             <Font name="System Bold Italic" size="25.0" />
          </font></Label>
-        <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="315.0" onKeyTyped="#changeDestination" promptText="Departure Time" />
-        <Label fx:id="errorLabel" alignment="CENTER" layoutX="73.0" layoutY="385.0" prefHeight="33.0" prefWidth="256.0" text="ERROR:" textAlignment="CENTER" textFill="#d00808" visible="false">
+        <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="301.0" onKeyTyped="#changeDepartureTime" promptText="Departure Time" />
+        <Label fx:id="errorLabel" alignment="CENTER" layoutX="70.0" layoutY="387.0" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #dc3545;" text="ERROR MESSAGE:  " textAlignment="CENTER" visible="false">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>

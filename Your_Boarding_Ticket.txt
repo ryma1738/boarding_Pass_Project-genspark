@@ -1,0 +1,8 @@
+	Boarding Ticket
+	Name: test,
+	Email: test@gmail.com,
+	Phone Number: 765-210-7238,
+	Gender: Male,
+	Age: 22,
+	Destination: Chicago,
+	Departure Time: 9:00 AM
