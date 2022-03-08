@@ -1,10 +1,8 @@
 package com.example.boardingpassproject;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
 public class Controller {
-    @FXML
     public String errorMessage;
     public String name;
     public String email;
@@ -18,7 +16,7 @@ public class Controller {
 
     //onChange event handlers
     @FXML
-    public void nameChange() {
+    public void changeName() {
 
     }
 
