@@ -22,6 +22,7 @@ public class Controller {
     public TextField departureField;
     @FXML
     public Label errorLabel;
+    
 
     public String errorMessage;
     public String name;
@@ -32,10 +33,6 @@ public class Controller {
     public String departureDate;
     public String destinationName;
     public String departureTime;
-
-
-
-
 
     //onChange event handlers
     @FXML
@@ -87,10 +84,28 @@ public class Controller {
 
     @FXML
     public void checkFormContents() {
+        errorLabel.setText(errorMessage);
+        errorMessage = "";
         // if error occurs set error msg visibility
-        errorLabel.setVisible(true);
-        errorLabel.setManaged(true);
-        //if an item is wrong change error message text else submitForm()
+        Boolean error = false;
+        if (name.length() < 1) {
+            errorMessage = "You must enter a name";
+            errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
+            return;
+        } else if (!email.matches("/.+@.+\\..+/") || email.length() < 8) {
+            errorMessage = "You must enter a valid email address";
+            errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
+            return;
+        } else if (!phoneChecker(phoneNumber)) {
+            errorMessage = "You must enter a valid phone number";
+            errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
+            return;
+        } else if () {
+            
+        }
         submitForm();
     }
 
@@ -98,7 +113,7 @@ public class Controller {
         // compile contents into files and generate ticket
     }
 
-    private String generateTicketNum () {
+    private String generateTicketNum() {
         //generate random ticket number that does not match another ticket num
         return "";
     }
@@ -116,11 +131,11 @@ public class Controller {
         return value;
     }
 
-    private void phoneChecker (String phoneNumber) {
+    private Boolean phoneChecker(String phoneNumber) {
         if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
-            System.out.println("Its Valid Number");
-        } else {
-            System.out.println("Invalid Phone Number!");
+            return true;
+        }else {
+            return false;
         }
     }
 
