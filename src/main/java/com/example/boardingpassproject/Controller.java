@@ -56,6 +56,7 @@ public class Controller {
 
         String current = phoneNumberField.getText();
         phoneNumber = createPhoneNumber(current);
+        phoneChecker(phoneNumber);
         phoneNumberField.setText(phoneNumber);
         phoneNumberField.positionCaret(phoneNumber.length());
 
@@ -113,6 +114,14 @@ public class Controller {
             }
         }
         return value;
+    }
+
+    private void phoneChecker (String phoneNumber) {
+        if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
+            System.out.println("Its Valid Number");
+        }else {
+            System.out.println("Invalid Phone Number!");
+        }
     }
 
 }
