@@ -50,7 +50,6 @@ public class Controller {
     @FXML
     public void changeName() {
         name = nameField.getText();
-        System.out.println(name);
     }
 
     @FXML 
@@ -61,7 +60,6 @@ public class Controller {
     @FXML
     public void changePhoneNum() {
         phoneNumber = phoneNumberField.getText();
-        System.out.println(phoneNumber);
 
         String current = phoneNumberField.getText();
         phoneNumber = createPhoneNumber(current);
@@ -100,12 +98,12 @@ public class Controller {
         errorMessage = "";
         // if error occurs set error msg visibility
         Boolean error = false;
-        if (name.length() < 1) {
+        if (name == null) {
             errorMessage = "You must enter a name";
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
             return;
-        } else if (!email.matches("/.+@.+\\..+/") || email.length() < 8) {
+        } else if (email == null || !App.validate(email) || email.length() < 8) {
             errorMessage = "You must enter a valid email address";
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
@@ -148,5 +146,6 @@ public class Controller {
             return false;
         }
     }
+
 
 }
