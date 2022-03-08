@@ -79,7 +79,7 @@ public class Controller {
     public void changeDepartureTime() {
         departureTime = departureField.getText();
     }
-    
+
     //End of onChange Event handlers
     @FXML
     public void checkFormContents() {
