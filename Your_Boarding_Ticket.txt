@@ -1,6 +1,6 @@
 	Boarding Ticket
-	Name: test,
-	Email: test@gmail.com,
+	Name: Brandon,
+	Email: excalibu7@gmail.com,
 	Phone Number: 765-210-7238,
 	Gender: Male,
 	Age: 22,
