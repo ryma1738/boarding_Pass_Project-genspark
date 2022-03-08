@@ -49,7 +49,10 @@ public class Controller {
 
     @FXML
     public void changePhoneNum() {
-        phoneNumber = phoneNumberField.getText();
+        String current = phoneNumberField.getText();
+        phoneNumber = createPhoneNumber(current);
+        phoneNumberField.setText(phoneNumber);
+        phoneNumberField.positionCaret(phoneNumber.length());
     }
 
     @FXML
@@ -90,4 +93,18 @@ public class Controller {
         //generate random ticket number that does not match another ticket num
         return "";
     }
+
+    private String createPhoneNumber(String value) {
+        if (value.length() == 3) {
+            if (phoneNumber.charAt(phoneNumber.length() - 1) != '-') {
+                return value + "-";
+            }
+        } else if (value.length() == 7) {
+            if (phoneNumber.charAt(phoneNumber.length() - 1) != '-') {
+                return value + "-";
+            }
+        }
+        return value;
+    }
+
 }
