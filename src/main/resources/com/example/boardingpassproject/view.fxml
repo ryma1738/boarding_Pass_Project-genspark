@@ -7,24 +7,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.boardingpassproject.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.boardingpassproject.Controller">
     <children>
-        <TextField fx:id="ageField" alignment="CENTER" layoutX="121.0" layoutY="224.0" onKeyTyped="#changeAge" promptText="Age" />
-        <TextField fx:id="nameField" alignment="CENTER" layoutX="121.0" layoutY="74.0" onKeyTyped="#changeName" promptText="Name" />
-        <TextField fx:id="genderField" alignment="CENTER" layoutX="122.0" layoutY="187.0" onKeyTyped="#changeGender" promptText="Gender" />
-        <TextField fx:id="destinationField" alignment="CENTER" layoutX="121.0" layoutY="262.0" onKeyTyped="#changeDestination" promptText="Destination" />
-        <Button layoutX="115.0" layoutY="437.0" mnemonicParsing="false" onAction="#submitForm" prefHeight="26.0" prefWidth="160.0" text="Generate Ticket" />
-        <DatePicker layoutX="111.0" layoutY="343.0" promptText="                 Date" />
         <Label layoutX="151.0" layoutY="34.0" text="Ticket Generator" textAlignment="CENTER">
+        <TextField fx:id="ageField" alignment="CENTER" layoutX="121.0" layoutY="235.0" onKeyTyped="#changeAge" promptText="Age" />
+        <TextField fx:id="nameField" alignment="CENTER" layoutX="121.0" layoutY="75.0" onKeyTyped="#changeName" promptText="Name" />
+        <TextField fx:id="genderField" alignment="CENTER" layoutX="122.0" layoutY="195.0" onKeyTyped="#changeGender" promptText="Gender" />
+        <TextField fx:id="destinationField" alignment="CENTER" layoutX="121.0" layoutY="275.0" onKeyTyped="#changeDestination" promptText="Destination" />
+        <Button fx:id="ticketButton" layoutX="130.0" layoutY="422.0" mnemonicParsing="false" onAction="#checkFormContents" prefHeight="26.0" prefWidth="145.5" text="Generate Ticket" />
+        <DatePicker layoutX="121.0" layoutY="355.0" prefWidth="159.5" promptText="                 Date" />
+        <Label layoutX="114.0" layoutY="23.0" text="Ticket Generator" textAlignment="CENTER">
          <font>
-            <Font name="System Bold Italic" size="12.0" />
+            <Font name="System Bold Italic" size="25.0" />
          </font></Label>
         <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="301.0" onKeyTyped="#changeDepartureTime" promptText="Departure Time" />
         <Label fx:id="errorLabel" alignment="CENTER" layoutX="70.0" layoutY="387.0" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #dc3545;" text="ERROR MESSAGE:  " textAlignment="CENTER" visible="false">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Label>
-        <TextField fx:id="emailField" alignment="CENTER" layoutX="122.0" layoutY="114.0" onKeyTyped="#changeEmail" promptText="Email" />
-        <TextField fx:id="phoneNumberField" alignment="CENTER" layoutX="121.0" layoutY="152.0" onKeyTyped="#changePhoneNum" promptText="Phone Number" />
+        <TextField fx:id="emailField" alignment="CENTER" layoutX="122.0" layoutY="115.0" onKeyTyped="#changeEmail" promptText="Email" />
+        <TextField fx:id="phoneNumberField" alignment="CENTER" layoutX="121.0" layoutY="155.0" onKeyTyped="#changePhoneNum" promptText="Phone Number" />
     </children>
 </AnchorPane>

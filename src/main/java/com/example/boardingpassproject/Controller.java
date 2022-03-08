@@ -1,8 +1,10 @@
 package com.example.boardingpassproject;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -26,7 +28,13 @@ public class Controller {
     public TextField departureField;
     @FXML
     public Label errorLabel;
-    
+
+    @FXML
+    public Button ticketButton;
+    @FXML
+    public Image backgroundImg;
+
+
 
     public String errorMessage;
     public String name;
@@ -37,6 +45,14 @@ public class Controller {
     public String departureDate;
     public String destinationName;
     public String departureTime;
+
+
+    public void initialize() {
+        //backgroundImg.setImage(new Image("sky.jpg"));
+    }
+
+
+
 
     //onChange event handlers
     @FXML
