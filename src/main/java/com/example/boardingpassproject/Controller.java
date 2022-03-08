@@ -119,7 +119,7 @@ public class Controller {
     private void phoneChecker (String phoneNumber) {
         if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
             System.out.println("Its Valid Number");
-        }else {
+        } else {
             System.out.println("Invalid Phone Number!");
         }
     }
