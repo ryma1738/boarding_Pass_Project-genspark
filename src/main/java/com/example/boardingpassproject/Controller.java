@@ -24,10 +24,12 @@ public class Controller {
     public TextField departureField;
     @FXML
     public Label errorLabel;
+
     @FXML
     public Button ticketButton;
     @FXML
     public Image backgroundImg;
+
 
 
     public String errorMessage;
@@ -40,9 +42,11 @@ public class Controller {
     public String destinationName;
     public String departureTime;
 
+
     public void initialize() {
         //backgroundImg.setImage(new Image("sky.jpg"));
     }
+
 
 
 
@@ -50,6 +54,7 @@ public class Controller {
     @FXML
     public void changeName() {
         name = nameField.getText();
+        System.out.println(name);
     }
 
     @FXML 
@@ -60,6 +65,14 @@ public class Controller {
     @FXML
     public void changePhoneNum() {
         phoneNumber = phoneNumberField.getText();
+        System.out.println(phoneNumber);
+
+        String current = phoneNumberField.getText();
+        phoneNumber = createPhoneNumber(current);
+        phoneChecker(phoneNumber);
+        phoneNumberField.setText(phoneNumber);
+        phoneNumberField.positionCaret(phoneNumber.length());
+
     }
 
     @FXML
@@ -87,10 +100,26 @@ public class Controller {
 
     @FXML
     public void checkFormContents() {
+        errorLabel.setText(errorMessage);
+        errorMessage = "";
         // if error occurs set error msg visibility
-        errorLabel.setVisible(true);
-        errorLabel.setManaged(true);
-        //if an item is wrong change error message text else submitForm()
+        Boolean error = false;
+        if (name.length() < 1) {
+            errorMessage = "You must enter a name";
+            errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
+            return;
+        } else if (!email.matches("/.+@.+\\..+/") || email.length() < 8) {
+            errorMessage = "You must enter a valid email address";
+            errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
+            return;
+        } else if (!phoneChecker(phoneNumber)) {
+            errorMessage = "You must enter a valid phone number";
+            errorLabel.setVisible(true);
+            errorLabel.setManaged(true);
+            return;
+        } 
         submitForm();
     }
 
@@ -98,8 +127,30 @@ public class Controller {
         // compile contents into files and generate ticket
     }
 
-    private String generateTicketNum () {
+    private String generateTicketNum() {
         //generate random ticket number that does not match another ticket num
         return "";
     }
+
+    private String createPhoneNumber(String value) {
+        if (value.length() == 3) {
+            if (phoneNumber.charAt(phoneNumber.length() - 1) != '-') {
+                return value + "-";
+            }
+        } else if (value.length() == 7) {
+            if (phoneNumber.charAt(phoneNumber.length() - 1) != '-') {
+                return value + "-";
+            }
+        }
+        return value;
+    }
+
+    private Boolean phoneChecker(String phoneNumber) {
+        if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 }
