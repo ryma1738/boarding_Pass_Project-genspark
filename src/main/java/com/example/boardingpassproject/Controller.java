@@ -103,9 +103,7 @@ public class Controller {
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
             return;
-        } else if () {
-            
-        }
+        } 
         submitForm();
     }
 
