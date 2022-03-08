@@ -4,11 +4,19 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class Controller {
+    public String errorMessage;
     @FXML
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void checkFormContents() {
+
+        //if an item is wrong change error message text else submitForm()
+
+    }
+
+    @FXML
+    public void submitForm() {
+        // compile contents into files and generate ticket
     }
 }
