@@ -98,22 +98,13 @@ public class Controller {
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
             return;
-        } else if (phoneNumber.length() > 12 || phoneNumber.length() < 12) {
+        } else if (!phoneChecker(phoneNumber)) {
             errorMessage = "You must enter a valid phone number";
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
             return;
         } else if () {
             
-        }
-
-        try {
-            Integer.parseInt(phoneNumber.replaceAll("-", " "));
-        } catch (Exception e) {
-            errorMessage = "Phone number must only contain numbers";
-            errorLabel.setVisible(true);
-            errorLabel.setManaged(true);
-            return;
         }
         submitForm();
     }
@@ -140,11 +131,11 @@ public class Controller {
         return value;
     }
 
-    private void phoneChecker (String phoneNumber) {
+    private Boolean phoneChecker(String phoneNumber) {
         if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
-            System.out.println("Its Valid Number");
+            return true;
         }else {
-            System.out.println("Invalid Phone Number!");
+            return false;
         }
     }
 
