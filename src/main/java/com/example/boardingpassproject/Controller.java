@@ -6,6 +6,14 @@ import javafx.scene.control.Label;
 public class Controller {
     @FXML
     public String errorMessage;
+    public String name;
+    public String email;
+    public String phoneNumber;
+    public String genders;
+    public String age;
+    public String departureDate;
+    public String destinationName;
+    public String departureTime;
 
 
     //onChange event handlers
@@ -44,6 +52,8 @@ public class Controller {
 
     }
     //End of onChange Event handlers
+
+
     @FXML
     public void checkFormContents() {
 
