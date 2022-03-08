@@ -12,11 +12,10 @@ public class Controller {
     public void checkFormContents() {
 
         //if an item is wrong change error message text else submitForm()
-
+        submitForm();
     }
 
-    @FXML
-    public void submitForm() {
+    private void submitForm() {
         // compile contents into files and generate ticket
     }
 }
