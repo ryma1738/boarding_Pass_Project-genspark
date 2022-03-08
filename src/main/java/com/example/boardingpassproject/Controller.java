@@ -1,6 +1,7 @@
 package com.example.boardingpassproject;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
@@ -19,6 +20,8 @@ public class Controller {
     public TextField destinationField;
     @FXML
     public TextField departureField;
+    @FXML
+    public Label errorLabel;
 
     public String errorMessage;
     public String name;
@@ -75,7 +78,9 @@ public class Controller {
 
     @FXML
     public void checkFormContents() {
-
+        // if error occurs set error msg visibility
+        errorLabel.setVisible(true);
+        errorLabel.setManaged(true);
         //if an item is wrong change error message text else submitForm()
         submitForm();
     }
