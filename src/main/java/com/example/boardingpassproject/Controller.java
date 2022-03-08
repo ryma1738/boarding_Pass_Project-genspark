@@ -123,7 +123,7 @@ public class Controller {
             if (ticket.createNewFile()) {
                 System.out.println("File created: " + ticket.getName());
             } else {
-                System.out.println("File already exists or file name taken");
+                System.out.println("File already exists");
             }
         } catch (IOException e) {
             System.out.println("Error occurred");
@@ -134,9 +134,9 @@ public class Controller {
     public void writeOverTicket() {
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            writer.write("\nBoarding Ticket\nName: " + name + ",\nEmail: " + email + ",\nPhone Number: " + phoneNumber + ",\nGender: " + genders + ",\nAge: " + age + ",\nDestination: " + destinationName + ",\nDeparture Time: " + departureTime);
+            writer.write("\tBoarding Ticket\n\tName: " + name + ",\n\tEmail: " + email + ",\n\tPhone Number: " + phoneNumber + ",\n\tGender: " + genders + ",\n\tAge: " + age + ",\n\tDestination: " + destinationName + ",\n\tDeparture Time: " + departureTime);
             writer.close();
-            System.out.println("Successfully wrote to file.");
+            System.out.println("Ticket Successfully Generated");
         } catch (IOException e) {
             System.out.println("Error occurred");
             e.printStackTrace();

@@ -19,7 +19,7 @@
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font></Label>
-        <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="301.0" onKeyTyped="#changeDestination" promptText="Departure Time" />
+        <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="301.0" onKeyTyped="#changeDepartureTime" promptText="Departure Time" />
         <Label fx:id="errorLabel" alignment="CENTER" layoutX="70.0" layoutY="387.0" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #dc3545;" text="ERROR MESSAGE:  " textAlignment="CENTER" visible="false">
          <font>
             <Font name="System Bold" size="12.0" />
