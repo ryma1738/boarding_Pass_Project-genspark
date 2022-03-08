@@ -1,8 +1,10 @@
 package com.example.boardingpassproject;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 
 public class Controller {
 
@@ -22,7 +24,12 @@ public class Controller {
     public TextField departureField;
     @FXML
     public Label errorLabel;
-    
+    @FXML
+    public Button ticketButton;
+    @FXML
+    public Image backgroundImg;
+
+
 
     public String errorMessage;
     public String name;
@@ -33,6 +40,11 @@ public class Controller {
     public String departureDate;
     public String destinationName;
     public String departureTime;
+
+
+    public void initialize() {
+        //backgroundImg.setImage(new Image("sky.jpg"));
+    }
 
     //onChange event handlers
     @FXML
@@ -132,7 +144,7 @@ public class Controller {
     private Boolean phoneChecker(String phoneNumber) {
         if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
