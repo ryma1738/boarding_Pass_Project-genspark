@@ -1,8 +1,6 @@
 package com.example.boardingpassproject;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
@@ -31,8 +29,6 @@ public class Controller {
     public String departureDate;
     public String destinationName;
     public String departureTime;
-
-    
 
 
 
