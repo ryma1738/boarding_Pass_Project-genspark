@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.boardingpassproject.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.boardingpassproject.Controller">
+   <children>
+      <TextField fx:id="ageField" layoutX="112.0" layoutY="243.0" promptText="Age" />
+      <TextField fx:id="nameField" layoutX="112.0" layoutY="78.0" onKeyTyped="#changeName" promptText="Name" />
+      <TextField fx:id="genderField" layoutX="112.0" layoutY="207.0" promptText="Gender" />
+      <TextField fx:id="destinationField" layoutX="112.0" layoutY="277.0" promptText="Destination" />
+      <Button layoutX="112.0" layoutY="437.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="160.0" text="Button" />
+      <DatePicker layoutX="99.0" layoutY="357.0" promptText="Date" />
+      <Label layoutX="177.0" layoutY="22.0" text="Label" />
+      <TextField fx:id="departureField" layoutX="112.0" layoutY="318.0" promptText="Departure Time" />
+      <Label layoutX="66.0" layoutY="394.0" prefHeight="33.0" prefWidth="256.0" text="Label" />
+      <TextField fx:id="emailField" layoutX="112.0" layoutY="117.0" onKeyTyped="#changeEmail" promptText="Email" />
+      <TextField fx:id="phoneNumberField" layoutX="112.0" layoutY="160.0" promptText="Phone Number" />
+   </children>
+</AnchorPane>
