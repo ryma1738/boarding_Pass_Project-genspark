@@ -25,6 +25,6 @@
             <Font name="System Bold" size="12.0" />
          </font></Label>
         <TextField fx:id="emailField" alignment="CENTER" layoutX="122.0" layoutY="114.0" onKeyTyped="#changeEmail" promptText="Email" />
-        <TextField fx:id="phoneNumberField" alignment="CENTER" layoutX="121.0" layoutY="152.0" promptText="Phone Number" />
+        <TextField fx:id="phoneNumberField" alignment="CENTER" layoutX="121.0" layoutY="152.0" onKeyTyped="#changePhoneNum" promptText="Phone Number" />
     </children>
 </AnchorPane>

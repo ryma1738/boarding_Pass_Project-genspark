@@ -42,6 +42,7 @@ public class Controller {
     @FXML
     public void changeName() {
         name = nameField.getText();
+        System.out.println(name);
     }
 
     @FXML 
@@ -52,6 +53,7 @@ public class Controller {
     @FXML
     public void changePhoneNum() {
         phoneNumber = phoneNumberField.getText();
+        System.out.println(phoneNumber);
     }
 
     @FXML
