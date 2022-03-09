@@ -11,12 +11,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.UUID;
+
+import com.example.Utils;
 
 public class Controller {
 
@@ -44,7 +44,6 @@ public class Controller {
     public Label errorLabel;
     @FXML
     public Button ticketButton;
-    
 
     public String errorMessage;
     public String name;
@@ -71,7 +70,6 @@ public class Controller {
         addCitiesToDrop(originBox);
         genderBox.getItems().addAll(
             "                  Male", "                 Female", "                 Other");
-
     }
 
 
@@ -90,8 +88,8 @@ public class Controller {
     @FXML
     public void changePhoneNum() {
         String current = phoneNumberField.getText();
-        phoneNumber = createPhoneNumber(current);
-        phoneChecker(phoneNumber);
+        phoneNumber = Utils.createPhoneNumber(current, phoneNumber);
+        Utils.phoneChecker(phoneNumber);
         phoneNumberField.setText(phoneNumber);
         phoneNumberField.positionCaret(phoneNumber.length());
 
@@ -121,11 +119,14 @@ public class Controller {
     public void changeDestination() {
         //destinationName = destinationField.getText();
         destinationName = (String) destinationBox.getValue();
+        destinationName = (String) destinationBox.getValue();
+        destinationName = destinationName.replaceAll("\\s", "");
     }
 
     @FXML
     public void changeDepartureTime() {
-        //departureTime = departureField.getText();
+        departureTime = (String) timeBox.getValue();
+        departureTime = departureTime.replaceAll("\\s", "");
     }
 
     @FXML
@@ -152,7 +153,7 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } else if (!phoneChecker(phoneNumber)) {
+        } else if (!Utils.phoneChecker(phoneNumber)) {
             errorMessage = "You must enter a valid phone number";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
@@ -170,23 +171,9 @@ public class Controller {
 
     public void submitForm() {
         // compile contents into files and generate ticket
-        createTicket();
+        Utils.createTicket();
         writeOverTicket();
         errorLabel.setVisible(false);
-    }
-
-    private void createTicket() {
-        try {
-            File ticket = new File("Your_Boarding_Ticket.txt");
-            if (ticket.createNewFile()) {
-                System.out.println("File created: " + ticket.getName());
-            } else {
-                System.out.println("File already exists: " + ticket.getName());
-            }
-        } catch (IOException e) {
-            System.out.println("Error occurred");
-            e.printStackTrace();
-        }
     }
 
     private void writeOverTicket() {
@@ -203,7 +190,7 @@ public class Controller {
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tDeparture Date: " + date +
-                    ",\n\tBoarding Pass ID: " + generateTicketNum();
+                    ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
@@ -215,33 +202,7 @@ public class Controller {
         }
     }
 
-    private String generateTicketNum() {
-        //generate random ticket number that does not match another ticket num
-        return UUID.randomUUID().toString();
-    }
-
-    private String createPhoneNumber(String value) {
-        if (value.length() == 3) {
-            if (phoneNumber.charAt(phoneNumber.length() - 1) != '-') {
-                return value + "-";
-            }
-        } else if (value.length() == 7) {
-            if (phoneNumber.charAt(phoneNumber.length() - 1) != '-') {
-                return value + "-";
-            }
-        }
-        return value;
-    }
-
-    private Boolean phoneChecker(String phoneNumber) {
-        if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public void populateCities() {
+    private void populateCities() {
         cities.add("          New York, NY");
         cities.add("         Los Angeles, CA");
         cities.add("           Chicago, IL");
@@ -254,11 +215,12 @@ public class Controller {
         cities.add("           San Jose, CA");
     }
 
-    public void addCitiesToDrop(ComboBox drop) {
+    private void addCitiesToDrop(ComboBox drop) {
         for(String i : cities) {
             drop.getItems().add(i);
         }
     }
+
 
 
 
