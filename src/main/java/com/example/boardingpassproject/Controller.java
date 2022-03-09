@@ -69,7 +69,8 @@ public class Controller {
         addCitiesToDrop(originBox);
         genderBox.getItems().addAll(
             "                  Male", "                 Female", "                 Other");
-        
+        timeBox.getItems().addAll("                 06:00 am", "                 10:30 am",
+         "                 02:30 pm", "                 07:00 pm", "                 11:00 pm");
     }
 
 
