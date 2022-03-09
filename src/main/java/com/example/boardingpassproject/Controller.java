@@ -46,10 +46,6 @@ public class Controller {
     public Button ticketButton;
     
 
-    
-    
-    
-
     public String errorMessage;
     public String name;
     public String email;
@@ -59,6 +55,7 @@ public class Controller {
     public String departureDate;
     public String destinationName;
     public String departureTime;
+    public String date;
 
     // storing cities we fly to
     ArrayList<String> cities = new ArrayList<>();
@@ -74,9 +71,7 @@ public class Controller {
         addCitiesToDrop(originBox);
         genderBox.getItems().addAll(
             "                  Male", "                 Female", "                 Other");
-        
-        //genderChoice.setItems(FXCollections.observableArrayList(
-           // "                   Gender", "                     Male", "                    Female", "                    Other"));
+
     }
 
 
@@ -117,13 +112,25 @@ public class Controller {
     }
 
     @FXML
+    public void changeOrigin() {
+        //destinationName = destinationField.getText();
+        destinationName = (String) originBox.getValue();
+    }
+
+    @FXML
     public void changeDestination() {
         //destinationName = destinationField.getText();
+        destinationName = (String) destinationBox.getValue();
     }
 
     @FXML
     public void changeDepartureTime() {
         //departureTime = departureField.getText();
+    }
+
+    @FXML
+    public void changeDate() {
+        date = departureDate;
     }
 
     //End of onChange Event handlers
@@ -195,6 +202,7 @@ public class Controller {
                     ",\n\tAge: " + age +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
+                    ",\n\tDeparture Date: " + date +
                     ",\n\tBoarding Pass ID: " + generateTicketNum();
             writer.write(ticketData);
             writer.close();
