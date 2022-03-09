@@ -52,8 +52,8 @@ public class Controller {
     public String gender;
     public String age;
     public String departureDate;
-    public String originName;
-    public String destinationName;
+    public String origin;
+    public String destination;
     public String departureTime;
 
     // storing cities we fly to
@@ -67,10 +67,8 @@ public class Controller {
         populateCities();
         addCitiesToDrop(destinationBox);
         addCitiesToDrop(originBox);
-        genderBox.getItems().addAll(
-            "                  Male", "                 Female", "                 Other");
-        timeBox.getItems().addAll("                 06:00 am", "                 10:30 am",
-         "                 02:30 pm", "                 07:00 pm", "                 11:00 pm");
+        genderBox.getItems().addAll("Male", "Female", "Other");
+        timeBox.getItems().addAll("06:00 am", "10:30 am", "03:00 pm", "07:30 pm", "12:00 am");
 
     }
 
@@ -102,8 +100,7 @@ public class Controller {
         // Gets value from genderBox and type casts to string
         // Then removes all white space from combo box placeholder text
         gender = (String) genderBox.getValue();
-        gender = gender.replaceAll("\\s", "");
-
+    
     }
 
     @FXML
@@ -113,20 +110,20 @@ public class Controller {
 
     @FXML
     public void changeOrigin() {
-        originName = (String) originBox.getValue();
-        originName = originName.replaceAll("\\s", "");
+        origin = (String) originBox.getValue();
+        
     }
 
     @FXML
     public void changeDestination() {
-        destinationName = (String) destinationBox.getValue();
-        destinationName = destinationName.replaceAll("\\s", "");
+        destination = (String) destinationBox.getValue();
+        
     }
 
     @FXML
     public void changeDepartureTime() {
         departureTime = (String) timeBox.getValue();
-        departureTime = departureTime.replaceAll("\\s", "");
+        
     }
 
     @FXML
@@ -177,13 +174,13 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } else if (originName == null) {
+        } else if (origin == null) {
             errorMessage = "You must choose a origin";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } else if (destinationName == null) {
+        } else if (destination == null) {
             errorMessage = "You must choose a destination";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
@@ -218,8 +215,8 @@ public class Controller {
                     ",\n\tPhone Number: " + phoneNumber +
                     ",\n\tGender: " + gender +
                     ",\n\tAge: " + age +
-                    ",\n\tOrigin: " + originName +
-                    ",\n\tDestination: " + destinationName +
+                    ",\n\tOrigin: " + origin +
+                    ",\n\tDestination: " + destination +
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tDeparture Date: " + departureDate +
                     ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
@@ -246,21 +243,58 @@ public class Controller {
     }
 
     private void populateCities() {
-        cities.add("          New York, NY");
-        cities.add("         Los Angeles, CA");
-        cities.add("           Chicago, IL");
-        cities.add("           Houston, TX");
-        cities.add("           Phoenix, AZ");
-        cities.add("         Philadelphia, PA");
-        cities.add("         San Antonio, TX");
-        cities.add("          San Diego, CA");
-        cities.add("             Dallas, TX");
-        cities.add("           San Jose, CA");
+        cities.add("New York, NY");
+        cities.add("Los Angeles, CA");
+        cities.add("Chicago, IL");
+        cities.add("Houston, TX");
+        cities.add("Phoenix, AZ");
+        cities.add("Philadelphia, PA");
+        cities.add("San Antonio, TX");
+        cities.add("San Diego, CA");
+        cities.add("Dallas, TX");
+        cities.add("San Jose, CA");
     }
 
     private void addCitiesToDrop(ComboBox drop) {
         for(String i : cities) {
             drop.getItems().add(i);
         }
+    }
+
+    public float applyTimeDiscount() {
+        float timeDiscount = 0;
+        switch((String) timeBox.getValue()) {
+            case "06:00 am" -> timeDiscount += .10;  
+            case "10:30 am" -> timeDiscount += .08;
+            case "03:00 pm" -> timeDiscount += .06;
+            case "07:30 pm" -> timeDiscount += .04;
+            case "12:00 am" -> timeDiscount += 1;
+        }
+        return timeDiscount;
+    }
+
+    public int getSubTotal() {
+        int eta = Utils.findTravelTime(origin, destination);
+        float x = applyTimeDiscount();
+        if(eta > 350) {
+            return 225 + (int) (225 * x); 
+        } else if(eta > 300) {
+            return 200 + (int) (200 * x);
+        } else if (eta > 250) {
+            return 175 + (int) (175 * x);
+        } else if (eta > 200) {
+            return 150 + (int) (150 * x);
+        } else if (eta > 150) {
+            return 125 + (int) (125 * x);
+        } else if (eta > 100) {
+            return 100 + (int) (100 * x);
+        } return 75+ (int) (75 * x);
+    }
+
+    public int getFinalPrice() {
+        if (Integer.parseInt(age) <= 12) return (int) (getSubTotal() * .5f);
+        if (Integer.parseInt(age) >= 60) return (int) (getSubTotal() * .6f);
+        if(gender.equals("female")) return (int) (getSubTotal() * .25f);
+        return getSubTotal();
     }
 }
