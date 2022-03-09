@@ -70,8 +70,6 @@ public class Controller {
         genderBox.getItems().addAll(
             "                  Male", "                 Female", "                 Other");
         
-        //genderChoice.setItems(FXCollections.observableArrayList(
-           // "                   Gender", "                     Male", "                    Female", "                    Other"));
     }
 
 
