@@ -64,8 +64,6 @@ public class Controller {
 
     @FXML
     public void changePhoneNum() {
-        phoneNumber = phoneNumberField.getText();
-
         String current = phoneNumberField.getText();
         phoneNumber = createPhoneNumber(current);
         phoneChecker(phoneNumber);
@@ -158,7 +156,7 @@ public class Controller {
                     ",\n\tAge: " + age +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
-                    ",\n\tBoarding Pass Number: " + generateTicketNum());
+                    ",\n\tBoarding Pass ID: " + generateTicketNum());
             writer.close();
             System.out.println("Ticket Successfully Generated");
         } catch (IOException e) {
