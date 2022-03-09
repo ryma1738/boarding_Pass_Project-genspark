@@ -14,11 +14,14 @@ import javafx.scene.image.ImageView;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.UUID;
 
 public class Controller {
 
+    @FXML
+    public ImageView backgroundImg;
     @FXML
     public TextField nameField;
     @FXML
@@ -28,24 +31,24 @@ public class Controller {
     @FXML
     public TextField ageField;
     @FXML
-    public TextField destinationField;
+    public ComboBox genderBox;
     @FXML
-    public TextField departureField;
+    public DatePicker departDate;
+    @FXML
+    public ComboBox originBox;
+    @FXML
+    public ComboBox destinationBox;
+    @FXML
+    public ComboBox timeBox;
     @FXML
     public Label errorLabel;
     @FXML
     public Button ticketButton;
-    @FXML
-    public ImageView backgroundImg;
-    @FXML
-    public ComboBox genderBox;
-    @FXML
-    public DatePicker departDate;
+    
 
-    @FXML
-    public ChoiceBox genderChoice;
-
-
+    
+    
+    
 
     public String errorMessage;
     public String name;
@@ -57,19 +60,32 @@ public class Controller {
     public String destinationName;
     public String departureTime;
 
+    // storing cities we fly to
+    ArrayList<String> cities = new ArrayList<>();
+        
     // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
     public HashSet<String> allTicketsGenerated = new HashSet<>();
 
-
+    
     public void initialize() {
+<<<<<<< HEAD
         genderBox.getItems().addAll( // this is a bad way to do this lol - ryan
             "                    Male", "                    Female", "                    Other");
         backgroundImg.setImage(new Image("sky.jpg"));
 
+=======
+        backgroundImg.setImage(new Image("sky.jpg"));
+        populateCities();
+        addCitiesToDrop(destinationBox);
+        addCitiesToDrop(originBox);
+        genderBox.getItems().addAll(
+            "                     Male", "                    Female", "                    Other");
+        
+>>>>>>> 95fc9762a6e72a1e024c1c32fb9217747b4fad3a
         //genderChoice.setItems(FXCollections.observableArrayList(
            // "                   Gender", "                     Male", "                    Female", "                    Other"));
-
     }
+
 
     //onChange event handlers
 
@@ -109,16 +125,15 @@ public class Controller {
 
     @FXML
     public void changeDestination() {
-        destinationName = destinationField.getText();
+        //destinationName = destinationField.getText();
     }
 
     @FXML
     public void changeDepartureTime() {
-        departureTime = departureField.getText();
+        //departureTime = departureField.getText();
     }
 
     //End of onChange Event handlers
-
 
     @FXML
     public void checkFormContents() {
@@ -224,4 +239,27 @@ public class Controller {
             return false;
         }
     }
+
+    public void populateCities() {
+        cities.add("          New York, NY");
+        cities.add("         Los Angeles, CA");
+        cities.add("           Chicago, IL");
+        cities.add("           Houston, TX");
+        cities.add("           Phoenix, AZ");
+        cities.add("         Philadelphia, PA");
+        cities.add("         San Antonio, TX");
+        cities.add("          San Diego, CA");
+        cities.add("             Dallas, TX");
+        cities.add("           San Jose, CA");
+    }
+
+    public void addCitiesToDrop(ComboBox drop) {
+        for(String i : cities) {
+            drop.getItems().add(i);
+        }
+    }
+
+
+
+
 }
