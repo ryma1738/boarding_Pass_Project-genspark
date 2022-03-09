@@ -10,6 +10,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.UUID;
+
 public class Controller {
 
     @FXML
@@ -57,6 +62,7 @@ public class Controller {
 
         //genderChoice.setItems(FXCollections.observableArrayList(
            // "                   Gender", "                     Male", "                    Female", "                    Other"));
+
     }
 
     //onChange event handlers
@@ -64,7 +70,6 @@ public class Controller {
     @FXML
     public void changeName() {
         name = nameField.getText();
-        System.out.println(name);
     }
 
     @FXML 
@@ -74,9 +79,6 @@ public class Controller {
 
     @FXML
     public void changePhoneNum() {
-        phoneNumber = phoneNumberField.getText();
-        System.out.println(phoneNumber);
-
         String current = phoneNumberField.getText();
         phoneNumber = createPhoneNumber(current);
         phoneChecker(phoneNumber);
@@ -110,36 +112,77 @@ public class Controller {
 
     @FXML
     public void checkFormContents() {
-        errorLabel.setText(errorMessage);
         errorMessage = "";
         // if error occurs set error msg visibility
         Boolean error = false;
-        if (name.length() < 1) {
+        if (name == null) {
             errorMessage = "You must enter a name";
             errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } else if (!email.matches("/.+@.+\\..+/") || email.length() < 8) {
+        } else if (email == null || !App.validate(email) || email.length() < 8) {
             errorMessage = "You must enter a valid email address";
             errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
         } else if (!phoneChecker(phoneNumber)) {
             errorMessage = "You must enter a valid phone number";
             errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
         }
         submitForm();
     }
 
-    private void submitForm() {
+    public void submitForm() {
         // compile contents into files and generate ticket
+        createTicket();
+        writeOverTicket();
+        errorLabel.setVisible(false);
+    }
+
+    private void createTicket() {
+        try {
+            File ticket = new File("Your_Boarding_Ticket.txt");
+            if (ticket.createNewFile()) {
+                System.out.println("File created: " + ticket.getName());
+            } else {
+                System.out.println("File already exists: " + ticket.getName());
+            }
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+            e.printStackTrace();
+        }
+    }
+
+    private void writeOverTicket() {
+        try {
+            FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
+            writer.write("\t*******************" +
+                    "\n\t| Boarding Ticket |" +
+                    "\n\t*******************" +
+                    "\n\tName: " + name +
+                    ",\n\tEmail: " + email +
+                    ",\n\tPhone Number: " + phoneNumber +
+                    ",\n\tGender: " + genders +
+                    ",\n\tAge: " + age +
+                    ",\n\tDestination: " + destinationName +
+                    ",\n\tDeparture Time: " + departureTime +
+                    ",\n\tBoarding Pass ID: " + generateTicketNum());
+            writer.close();
+            System.out.println("Ticket Successfully Generated");
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+            e.printStackTrace();
+        }
     }
 
     private String generateTicketNum() {
         //generate random ticket number that does not match another ticket num
-        return "";
+        return UUID.randomUUID().toString();
     }
 
     private String createPhoneNumber(String value) {
@@ -158,9 +201,10 @@ public class Controller {
     private Boolean phoneChecker(String phoneNumber) {
         if (phoneNumberField.getText().matches("(?:\\d{3}-){2}\\d{4}")) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
+
 
 }
