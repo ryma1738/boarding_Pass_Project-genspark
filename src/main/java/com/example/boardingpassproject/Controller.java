@@ -219,7 +219,8 @@ public class Controller {
                     ",\n\tDestination: " + destination +
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tDeparture Date: " + departureDate +
-                    ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
+                    ",\n\tBoarding Pass ID: " + Utils.generateTicketNum() +
+                    ",\n\tTicket Price: $" + getFinalPrice();
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);

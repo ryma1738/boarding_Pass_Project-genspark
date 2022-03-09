@@ -2,13 +2,14 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: f,
-	Email: f@gmail.com,
-	Phone Number: 123-123-1223,
-	Gender: Male,
-	Age: 1,
-	Origin: Houston,TX,
-	Destination: Phoenix,AZ,
-	Departure Time: 07:00pm,
-	Departure Date: 2022-03-17,
-	Boarding Pass ID: 784f58cd-5fea-4a3c-b999-bbfbdb422a66
+	Name: f1,
+	Email: f1@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Female,
+	Age: 32,
+	Origin: Dallas, TX,
+	Destination: Phoenix, AZ,
+	Departure Time: 07:30 pm,
+	Departure Date: 2022-03-24,
+	Boarding Pass ID: 64ea64a6-76b6-4822-9dc1-baf1c09c0f65,
+	Ticket Price: $104
