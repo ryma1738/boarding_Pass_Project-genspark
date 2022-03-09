@@ -2,13 +2,13 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: test2,
-	Email: test2@gmail.com,
-	Phone Number: 123-123-1235,
-	Gender: Male,
-	Age: 23,
-	Origin: Philadelphia,PA,
+	Name: Steve Rogers,
+	Email: steveSleeve@yahoo.com,
+	Phone Number: 219-847-3456,
+	Gender: Other,
+	Age: 61,
+	Origin: Houston,TX,
 	Destination: Chicago,IL,
-	Departure Time: null,
-	Departure Date: 2022-03-26,
-	Boarding Pass ID: e63673a3-2f7a-496b-bc37-40daefadd56b
+	Departure Time: 10:30am,
+	Departure Date: 2022-03-24,
+	Boarding Pass ID: a702dbb7-4785-4a09-9a20-3f6639065f5f
