@@ -118,13 +118,16 @@ public class Controller {
 
     @FXML
     public void changeDestination() {
-        //destinationName = destinationField.getText();
+        destinationName = (String) destinationBox.getValue();
+        destinationName = destinationName.replaceAll("\\s", "");
     }
 
     @FXML
     public void changeDepartureTime() {
-        //departureTime = departureField.getText();
+        departureTime = (String) timeBox.getValue();
+        departureTime = departureTime.replaceAll("\\s", "");
     }
+
 
     //End of onChange Event handlers
 
