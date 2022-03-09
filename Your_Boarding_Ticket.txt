@@ -1,3 +1,4 @@
+
 	*******************
 	| Boarding Ticket |
 	*******************
@@ -7,5 +8,5 @@
 	Gender: Male,
 	Age: 23,
 	Destination: Chicago,
-	Departure Time: 9:00 AM,
-	Boarding Pass ID: 575a6e89-cb6d-48e0-9810-5cda2eb5e100
+	Departure Time: 12:00 PM,
+	Boarding Pass ID: 20999ab0-d71c-45cd-a612-5e574c520616

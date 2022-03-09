@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.UUID;
 
 public class Controller {
@@ -53,6 +54,9 @@ public class Controller {
     public String departureDate;
     public String destinationName;
     public String departureTime;
+
+    // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
+    public HashSet<String> allTicketsGenerated = new HashSet<>();
 
 
     public void initialize() {
@@ -164,7 +168,7 @@ public class Controller {
     private void writeOverTicket() {
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            writer.write("\t*******************" +
+            writer.write("\n\t*******************" +
                     "\n\t| Boarding Ticket |" +
                     "\n\t*******************" +
                     "\n\tName: " + name +
@@ -176,7 +180,19 @@ public class Controller {
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tBoarding Pass ID: " + generateTicketNum());
             writer.close();
+            allTicketsGenerated.add("\n\t*******************" +
+                    "\n\t| Boarding Ticket |" +
+                    "\n\t*******************" +
+                    "\n\tName: " + name +
+                    ",\n\tEmail: " + email +
+                    ",\n\tPhone Number: " + phoneNumber +
+                    ",\n\tGender: " + genders +
+                    ",\n\tAge: " + age +
+                    ",\n\tDestination: " + destinationName +
+                    ",\n\tDeparture Time: " + departureTime +
+                    ",\n\tBoarding Pass ID: " + generateTicketNum());
             System.out.println("Ticket Successfully Generated");
+            System.out.println(allTicketsGenerated);
         } catch (IOException e) {
             System.out.println("Error occurred");
             e.printStackTrace();
