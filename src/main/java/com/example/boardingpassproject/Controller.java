@@ -71,7 +71,7 @@ public class Controller {
             "                  Male", "                 Female", "                 Other");
         
         //genderChoice.setItems(FXCollections.observableArrayList(
-           // "                   Gender", "                     Male", "                    Female", "                    Other"));
+           // "                   Gender", "                     Male", "                    Female", "                    Other")); 
     }
 
 
@@ -206,9 +206,4 @@ public class Controller {
             drop.getItems().add(i);
         }
     }
-
-
-
-
-
 }
