@@ -23,8 +23,6 @@ public class Controller {
     public TextField emailField;
     @FXML
     public TextField phoneNumberField;
-    //@FXML
-    //public TextField genderField;
     @FXML
     public TextField ageField;
     @FXML
@@ -39,6 +37,7 @@ public class Controller {
     public ImageView backgroundImg;
     @FXML
     public ComboBox genderBox;
+    
     @FXML
     public ChoiceBox genderChoice;
 
@@ -48,7 +47,7 @@ public class Controller {
     public String name;
     public String email;
     public String phoneNumber;
-    public String genders;
+    public String gender;
     public String age;
     public String departureDate;
     public String destinationName;
@@ -89,7 +88,7 @@ public class Controller {
 
     @FXML
     public void changeGender() {
-        //genders = genderField.getText();
+        gender = (String) genderBox.getValue();
     }
 
     @FXML
@@ -133,6 +132,12 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
+        } else if (gender == null) {
+            errorMessage = "You must choose a gender";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
         }
         submitForm();
     }
@@ -167,7 +172,7 @@ public class Controller {
                     "\n\tName: " + name +
                     ",\n\tEmail: " + email +
                     ",\n\tPhone Number: " + phoneNumber +
-                    ",\n\tGender: " + genders +
+                    ",\n\tGender: " + gender +
                     ",\n\tAge: " + age +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
