@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.UUID;
 
@@ -46,5 +47,18 @@ public class Utils {
         }
     }
 
+    public static void createFileForStoringAllTickets() {
+        try {
+            File storeAllTickets = new File("ALL_TICKETS_GENERATED.txt");
+            if (storeAllTickets.createNewFile()) {
+                System.out.println("File created: " + storeAllTickets.getName());
+            } else {
+                System.out.println("File already exists: " + storeAllTickets.getName());
+            }
+        } catch (IOException e) {
+            System.out.println("Error occurred");
+            e.printStackTrace();
+        }
+    }
     
 }

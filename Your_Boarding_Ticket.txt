@@ -2,13 +2,13 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Brandon,
-	Email: test@gmail.com,
-	Phone Number: 123-123-1234,
+	Name: test2,
+	Email: test2@gmail.com,
+	Phone Number: 123-123-1235,
 	Gender: Male,
 	Age: 23,
-	Origin: NewYork,NY,
+	Origin: Philadelphia,PA,
 	Destination: Chicago,IL,
 	Departure Time: null,
-	Departure Date: null,
-	Boarding Pass ID: 38511fe0-b490-480e-afad-7bb4a6d680aa
+	Departure Date: 2022-03-26,
+	Boarding Pass ID: e63673a3-2f7a-496b-bc37-40daefadd56b
