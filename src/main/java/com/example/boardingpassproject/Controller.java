@@ -73,7 +73,7 @@ public class Controller {
         addCitiesToDrop(destinationBox);
         addCitiesToDrop(originBox);
         genderBox.getItems().addAll(
-            "                     Male", "                    Female", "                    Other");
+            "                  Male", "                 Female", "                 Other");
         
         //genderChoice.setItems(FXCollections.observableArrayList(
            // "                   Gender", "                     Male", "                    Female", "                    Other"));
