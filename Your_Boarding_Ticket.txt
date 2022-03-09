@@ -1,6 +1,8 @@
+
 	*******************
 	| Boarding Ticket |
 	*******************
+<<<<<<< HEAD
 	Name: Mike,
 	Email: msalbrig@yahoo.com,
 	Phone Number: 766-555-7777,
@@ -9,3 +11,13 @@
 	Destination: null,
 	Departure Time: null,
 	Boarding Pass ID: 63f5a14f-1619-40f3-9a17-7adadabc6084
+=======
+	Name: Tester1,
+	Email: test1@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Male,
+	Age: 23,
+	Destination: YO MOMS HOUSE,
+	Departure Time: 8:00 AM,
+	Boarding Pass ID: c3690e9e-b376-4518-a487-219a1933ac12
+>>>>>>> 63199562c4a57cea7177d7c19d0524d812d7120a

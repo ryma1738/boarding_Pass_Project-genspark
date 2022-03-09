@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.UUID;
 
 public class Controller {
@@ -53,10 +54,13 @@ public class Controller {
     public String destinationName;
     public String departureTime;
 
+    // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
+    public HashSet<String> allTicketsGenerated = new HashSet<>();
+
 
     public void initialize() {
         genderBox.getItems().addAll(
-            "                     Male", "                    Female", "                    Other");
+            "                 Male", "                Female", "                Other");
         backgroundImg.setImage(new Image("sky.jpg"));
 
         //genderChoice.setItems(FXCollections.observableArrayList(
@@ -88,7 +92,11 @@ public class Controller {
 
     @FXML
     public void changeGender() {
+        // Gets value from genderBox and type casts to string
+        // Then removes all white space from combo box placeholder text
         gender = (String) genderBox.getValue();
+        gender = gender.replaceAll("\\s", "");
+
     }
 
     @FXML
@@ -166,7 +174,7 @@ public class Controller {
     private void writeOverTicket() {
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            writer.write("\t*******************" +
+            String ticketData = "\n\t*******************" +
                     "\n\t| Boarding Ticket |" +
                     "\n\t*******************" +
                     "\n\tName: " + name +
@@ -176,9 +184,12 @@ public class Controller {
                     ",\n\tAge: " + age +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
-                    ",\n\tBoarding Pass ID: " + generateTicketNum());
+                    ",\n\tBoarding Pass ID: " + generateTicketNum();
+            writer.write(ticketData);
             writer.close();
+            allTicketsGenerated.add(ticketData);
             System.out.println("Ticket Successfully Generated");
+            System.out.println(allTicketsGenerated);
         } catch (IOException e) {
             System.out.println("Error occurred");
             e.printStackTrace();
