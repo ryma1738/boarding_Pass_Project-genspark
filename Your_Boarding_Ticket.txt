@@ -1,8 +1,10 @@
-	Boarding Ticket
-	Name: f,
-	Email: f@gmail.com,
-	Phone Number: 765-210-7238,
-	Gender: null,
-	Age: null,
-	Destination: null,
-	Departure Time: null
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: Test User,
+	Email: testemail@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Male,
+	Age: 22,
+	Destination: YO MOMMA'S HOUSE,
+	Departure Time: 9:00 AM

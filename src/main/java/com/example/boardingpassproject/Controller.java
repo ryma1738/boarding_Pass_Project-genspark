@@ -147,7 +147,9 @@ public class Controller {
     private void writeOverTicket() {
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            writer.write("\tBoarding Ticket" +
+            writer.write("\t*******************" +
+                    "\n\t| Boarding Ticket |" +
+                    "\n\t*******************" +
                     "\n\tName: " + name +
                     ",\n\tEmail: " + email +
                     ",\n\tPhone Number: " + phoneNumber +
