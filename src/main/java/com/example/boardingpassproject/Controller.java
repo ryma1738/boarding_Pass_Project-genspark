@@ -89,7 +89,10 @@ public class Controller {
 
     @FXML
     public void changeGender() {
-        //genders = genderField.getText();
+        // Gets value from genderBox and type casts to string
+        // Then removes all white space from combo box placeholder text
+        genders = (String) genderBox.getValue();
+        genders = genders.replaceAll("\\s", "");
     }
 
     @FXML

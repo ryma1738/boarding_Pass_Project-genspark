@@ -1,11 +1,11 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: ,
-	Email: f@gmail.com,
+	Name: test,
+	Email: test@gmail.com,
 	Phone Number: 123-123-1234,
 	Gender: Male,
 	Age: 23,
 	Destination: Chicago,
 	Departure Time: 9:00 AM,
-	Boarding Pass ID: 10631c6c-dbc4-41f1-938f-dc9ef1d1630c
+	Boarding Pass ID: 575a6e89-cb6d-48e0-9810-5cda2eb5e100
