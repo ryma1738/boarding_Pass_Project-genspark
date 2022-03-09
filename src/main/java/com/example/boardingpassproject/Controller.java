@@ -1,9 +1,7 @@
 package com.example.boardingpassproject;
 
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -13,12 +11,14 @@ import javafx.scene.image.ImageView;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import com.example.Utils;
 
-public class Controller {
+public class Controller{
 
     @FXML
     public ImageView backgroundImg;
@@ -55,7 +55,6 @@ public class Controller {
     public String origin;
     public String destination;
     public String departureTime;
-    public int totalPrice;
 
     // storing cities we fly to
     ArrayList<String> cities = new ArrayList<>();
@@ -101,7 +100,7 @@ public class Controller {
         // Gets value from genderBox and type casts to string
         // Then removes all white space from combo box placeholder text
         gender = (String) genderBox.getValue();
-        //gender = gender.replaceAll("\\s", "");
+    
     }
 
     @FXML
@@ -112,19 +111,19 @@ public class Controller {
     @FXML
     public void changeOrigin() {
         origin = (String) originBox.getValue();
-        //origin = origin.replaceAll("\\s", "");
+        
     }
 
     @FXML
     public void changeDestination() {
         destination = (String) destinationBox.getValue();
-        //destination = destination.replaceAll("\\s", "");
+        
     }
 
     @FXML
     public void changeDepartureTime() {
         departureTime = (String) timeBox.getValue();
-        //departureTime = departureTime.replaceAll("\\s", "");
+        
     }
 
     @FXML
@@ -164,13 +163,13 @@ public class Controller {
             errorLabel.setManaged(true);
             return;
         }
-        totalPrice = getFinalPrice();
         submitForm();
     }
 
     public void submitForm() {
         // compile contents into files and generate ticket
         Utils.createTicket();
+        Utils.createFileForStoringAllTickets();
         writeOverTicket();
         errorLabel.setVisible(false);
     }
@@ -205,11 +204,9 @@ public class Controller {
 
     private static void storeAllTicketsGenerated() {
         try {
-            FileWriter writerForStoringAllTickets = new FileWriter("ALL_TICKETS_GENERATED.txt");
             for (var eachTicket: allTicketsGenerated) {
-                writerForStoringAllTickets.write(eachTicket);
+                Files.write(Paths.get("ALL_TICKETS_GENERATED.txt"), eachTicket.getBytes(), StandardOpenOption.APPEND);
             }
-            writerForStoringAllTickets.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

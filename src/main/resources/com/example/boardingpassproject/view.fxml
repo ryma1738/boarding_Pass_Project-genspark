@@ -31,7 +31,7 @@
       <ComboBox fx:id="originBox" layoutX="95.0" layoutY="315.0" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Origin" style="-fx-border-color: #ffea76;" />
       <ComboBox fx:id="destinationBox" layoutX="95.0" layoutY="355.0" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Destination" style="-fx-border-color: #ffea76;" />
       <ComboBox fx:id="timeBox" layoutX="95.0" layoutY="395.0" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Time" style="-fx-border-color: #ffea76;" />
-        
+       
         <Label fx:id="errorLabel" alignment="CENTER" layoutX="47.0" layoutY="423.0" prefHeight="28.0" prefWidth="256.0" style="-fx-background-color: #d9534f;" text="ERROR:" textAlignment="CENTER" textFill="#d00808" visible="false">
          <font>
             <Font name="System Bold" size="14.0" />

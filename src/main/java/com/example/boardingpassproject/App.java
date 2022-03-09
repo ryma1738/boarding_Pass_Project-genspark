@@ -20,7 +20,6 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
     }
-   // Brandon
 
     public static void main(String[] args) {
         launch();
