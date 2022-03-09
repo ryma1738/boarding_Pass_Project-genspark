@@ -168,7 +168,7 @@ public class Controller {
     private void writeOverTicket() {
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            writer.write("\n\t*******************" +
+            String ticketData = "\n\t*******************" +
                     "\n\t| Boarding Ticket |" +
                     "\n\t*******************" +
                     "\n\tName: " + name +
@@ -178,19 +178,10 @@ public class Controller {
                     ",\n\tAge: " + age +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
-                    ",\n\tBoarding Pass ID: " + generateTicketNum());
+                    ",\n\tBoarding Pass ID: " + generateTicketNum();
+            writer.write(ticketData);
             writer.close();
-            allTicketsGenerated.add("\n\t*******************" +
-                    "\n\t| Boarding Ticket |" +
-                    "\n\t*******************" +
-                    "\n\tName: " + name +
-                    ",\n\tEmail: " + email +
-                    ",\n\tPhone Number: " + phoneNumber +
-                    ",\n\tGender: " + genders +
-                    ",\n\tAge: " + age +
-                    ",\n\tDestination: " + destinationName +
-                    ",\n\tDeparture Time: " + departureTime +
-                    ",\n\tBoarding Pass ID: " + generateTicketNum());
+            allTicketsGenerated.add(ticketData);
             System.out.println("Ticket Successfully Generated");
             System.out.println(allTicketsGenerated);
         } catch (IOException e) {
