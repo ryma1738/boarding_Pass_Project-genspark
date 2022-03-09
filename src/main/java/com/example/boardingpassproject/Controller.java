@@ -236,7 +236,4 @@ public class Controller {
             drop.getItems().add(i);
         }
     }
-
-    
-
 }
