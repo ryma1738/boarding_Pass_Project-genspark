@@ -98,23 +98,25 @@ public class Controller {
 
     @FXML
     public void checkFormContents() {
-        errorLabel.setText(errorMessage);
         errorMessage = "";
         // if error occurs set error msg visibility
         Boolean error = false;
         if (name == null) {
             errorMessage = "You must enter a name";
             errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
         } else if (email == null || !App.validate(email) || email.length() < 8) {
             errorMessage = "You must enter a valid email address";
             errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
         } else if (!phoneChecker(phoneNumber)) {
             errorMessage = "You must enter a valid phone number";
             errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
         }
@@ -125,15 +127,16 @@ public class Controller {
         // compile contents into files and generate ticket
         createTicket();
         writeOverTicket();
+        errorLabel.setVisible(false);
     }
 
-    public void createTicket() {
+    private void createTicket() {
         try {
             File ticket = new File("Your_Boarding_Ticket.txt");
             if (ticket.createNewFile()) {
                 System.out.println("File created: " + ticket.getName());
             } else {
-                System.out.println("File already exists");
+                System.out.println("File already exists: " + ticket.getName());
             }
         } catch (IOException e) {
             System.out.println("Error occurred");
@@ -141,10 +144,17 @@ public class Controller {
         }
     }
 
-    public void writeOverTicket() {
+    private void writeOverTicket() {
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            writer.write("\tBoarding Ticket\n\tName: " + name + ",\n\tEmail: " + email + ",\n\tPhone Number: " + phoneNumber + ",\n\tGender: " + genders + ",\n\tAge: " + age + ",\n\tDestination: " + destinationName + ",\n\tDeparture Time: " + departureTime);
+            writer.write("\tBoarding Ticket" +
+                    "\n\tName: " + name +
+                    ",\n\tEmail: " + email +
+                    ",\n\tPhone Number: " + phoneNumber +
+                    ",\n\tGender: " + genders +
+                    ",\n\tAge: " + age +
+                    ",\n\tDestination: " + destinationName +
+                    ",\n\tDeparture Time: " + departureTime);
             writer.close();
             System.out.println("Ticket Successfully Generated");
         } catch (IOException e) {
