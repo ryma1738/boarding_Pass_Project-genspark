@@ -1,9 +1,7 @@
 package com.example.boardingpassproject;
 
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -16,9 +14,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import com.example.Utils;
 
-public class Controller {
+public class Controller{
 
     @FXML
     public ImageView backgroundImg;
