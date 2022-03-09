@@ -27,12 +27,21 @@
       <TextField fx:id="ageField" alignment="CENTER" layoutX="95.0" layoutY="195.0" onKeyTyped="#changeAge" opacity="0.95" promptText="Age" style="-fx-border-color: #ffea76;" />
       
       <ComboBox fx:id="genderBox" layoutX="95.0" layoutY="235.0" onAction="#changeGender" opacity="0.5" prefWidth="159.5" promptText="Gender" style="-fx-border-color: #ffea76;" />
+<<<<<<< HEAD
       <DatePicker fx:id="departDate" layoutX="95.0" layoutY="275.0" opacity="0.95" prefWidth="159.5" promptText="Date" style="-fx-border-color: #ffea76; text-field-fx-alignment: center;" />
       <ComboBox fx:id="originBox" layoutX="95.0" layoutY="315.0" onAction="#changeOrigin" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Origin" style="-fx-border-color: #ffea76;" />
       <ComboBox fx:id="destinationBox" layoutX="95.0" layoutY="355.0" onAction="#changeDestination" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Destination" style="-fx-border-color: #ffea76;" />
       <ComboBox fx:id="timeBox" layoutX="95.0" layoutY="395.0" onAction="#changeDepartureTime" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Time" style="-fx-border-color: #ffea76;" />
         
       <Label fx:id="errorLabel" alignment="CENTER" layoutX="47.0" layoutY="423.0" prefHeight="30.0" prefWidth="256.0" style="-fx-background-color: rgba(220,220,220,.6);" textAlignment="CENTER" textFill="#cf0808" visible="false">
+=======
+        <DatePicker fx:id="departDate" layoutX="95.0" layoutY="275.0" onAction="#changeDate" opacity="0.95" prefWidth="159.5" promptText="Date" style="-fx-border-color: #ffea76; text-field-fx-alignment: center;" />
+      <ComboBox fx:id="originBox" layoutX="95.0" layoutY="315.0" onAction="#changeOrigin" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Origin" style="-fx-border-color: #ffea76;" />
+      <ComboBox fx:id="destinationBox" layoutX="95.0" layoutY="355.0" onAction="#changeDestination" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Destination" style="-fx-border-color: #ffea76;" />
+      <ComboBox fx:id="timeBox" layoutX="95.0" layoutY="395.0" onAction="#changeDepartureTime" opacity="0.6" prefHeight="28.0" prefWidth="159.5" promptText="Time" style="-fx-border-color: #ffea76;" />
+       
+        <Label fx:id="errorLabel" alignment="CENTER" layoutX="47.0" layoutY="423.0" prefHeight="28.0" prefWidth="256.0" style="-fx-background-color: #d9534f;" text="ERROR:" textAlignment="CENTER" textFill="#d00808" visible="false">
+>>>>>>> e968547346da4ae60137e531ef268424e7cd0301
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>

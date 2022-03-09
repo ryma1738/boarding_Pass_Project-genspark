@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.UUID;
 
 public class Utils {
-    private final static ArrayList<String> locationCombos = new ArrayList<>(Arrays.asList(new String[]{ 
+    private final static ArrayList<String> locationCombos = new ArrayList<>(Arrays.asList(new String[]{
         "New York, Ny : Los Angeles, CA", "New York, NY : Chicago, IL", "New York, NY : Houston, TX", "New York, NY : Phoenix, AZ",
         "New York, NY : Philadelphia, PA", "New York, NY : San Antonia, TX", "New York, NY : San Diego, CA", "New York, NY : Dallas, TX",
         "New York, NY : San Jose, CA", "Los Angeles, CA : Chicago, IL", "Los Angeles, CA : Houston, TX", "Los Angeles, CA : Phoenix, AZ",
@@ -18,7 +18,7 @@ public class Utils {
         "Houston, TX : San Diego, CA", "Houston, TX : Dallas, TX", "Houston, TX : San Jose, CA", "Phoenix, AZ : Philadelphia, PA",
         "Phoenix, AZ : San Antonio, TX", "Phoenix, AZ : San Diego, CA", "Phoenix, AZ : Dallas, TX", "Phoenix, AZ : San Jose, CA",
         "Philadelphia, PA : San Antonio, TX", "Philadelphia, PA : San Diego, CA", "Philadelphia, PA : Dallas, TX",
-        "Philadelphia, PA : San Jose, CA", "San Antonio, TX : San Diego, CA", "San Antonio, TX : Dallas, TX", 
+        "Philadelphia, PA : San Jose, CA", "San Antonio, TX : San Diego, CA", "San Antonio, TX : Dallas, TX",
         "San Antonio, TX : San Jose, CA", "San Diego, CA : Dallas, TX", "San Diego, CA : San Jose, CA", "Dallas, TX : San Jose, CA"}));
     
     private final static int[] travelTime = new int[]{380, 160, 250, 345, 60, 265, 375, 245, 410, 240, 190, 85, 300, 165, 60, 175, 75, 170, 230,
@@ -31,9 +31,14 @@ public class Utils {
     }
 
     public static Boolean phoneChecker(String phoneNumber) {
-        if (phoneNumber.matches("(?:\\d{3}-){2}\\d{4}")) {
-            return true;
+        if (phoneNumber != null) {
+            if (phoneNumber.matches("(?:\\d{3}-){2}\\d{4}")) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
+            System.out.println("Phone number is null or empty");
             return false;
         }
     }

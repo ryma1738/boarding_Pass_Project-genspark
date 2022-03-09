@@ -2,6 +2,7 @@
 	*******************
 	| Boarding Ticket |
 	*******************
+<<<<<<< HEAD
 	Name: Jon Bon Jovi,
 	Email: bonjovi82@yahoo.com,
 	Phone Number: 219-333-4567,
@@ -12,3 +13,16 @@
 	Departure Time: 03:00 pm,
 	Departure Date: null,
 	Boarding Pass ID: faa7a067-9e86-4400-a5d5-b43784779135
+=======
+	Name: f1,
+	Email: f1@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Female,
+	Age: 32,
+	Origin: Dallas, TX,
+	Destination: Phoenix, AZ,
+	Departure Time: 07:30 pm,
+	Departure Date: 2022-03-24,
+	Boarding Pass ID: 64ea64a6-76b6-4822-9dc1-baf1c09c0f65,
+	Ticket Price: $104
+>>>>>>> e968547346da4ae60137e531ef268424e7cd0301

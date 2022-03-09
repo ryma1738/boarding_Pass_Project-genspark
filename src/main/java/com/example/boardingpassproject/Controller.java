@@ -156,12 +156,6 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } else if (gender == null) {
-            errorMessage = "You must choose a gender";
-            errorLabel.setVisible(true);
-            errorLabel.setText(errorMessage);
-            errorLabel.setManaged(true);
-            return;
         } else if (age == null) {
             errorMessage = "You must choose a age";
             errorLabel.setVisible(true);
@@ -170,6 +164,12 @@ public class Controller {
             return;
         } else if (gender == null) {
             errorMessage = "You must choose a gender";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (departureDate == null) {
+            errorMessage = "You must choose a depart date";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
@@ -226,7 +226,8 @@ public class Controller {
                     ",\n\tDestination: " + destination +
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tDeparture Date: " + departureDate +
-                    ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
+                    ",\n\tBoarding Pass ID: " + Utils.generateTicketNum() +
+                    ",\n\tTicket Price: $" + getFinalPrice();
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
