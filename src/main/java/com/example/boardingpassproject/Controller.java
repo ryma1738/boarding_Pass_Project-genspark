@@ -63,7 +63,6 @@ public class Controller {
     // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
     public HashSet<String> allTicketsGenerated = new HashSet<>();
 
-    
     public void initialize() {
         backgroundImg.setImage(new Image("sky.jpg"));
         populateCities();
@@ -167,7 +166,7 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        }
+        } 
         submitForm();
     }
 
@@ -223,5 +222,7 @@ public class Controller {
             drop.getItems().add(i);
         }
     }
+
+    
 
 }
