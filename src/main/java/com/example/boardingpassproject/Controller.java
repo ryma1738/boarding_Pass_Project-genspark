@@ -52,6 +52,7 @@ public class Controller {
     public String gender;
     public String age;
     public String departureDate;
+    public String originName;
     public String destinationName;
     public String departureTime;
 
@@ -59,9 +60,8 @@ public class Controller {
     ArrayList<String> cities = new ArrayList<>();
         
     // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
-    public HashSet<String> allTicketsGenerated = new HashSet<>();
+    public static HashSet<String> allTicketsGenerated = new HashSet<>();
 
-    
     public void initialize() {
         backgroundImg.setImage(new Image("sky.jpg"));
         populateCities();
@@ -69,9 +69,9 @@ public class Controller {
         addCitiesToDrop(originBox);
         genderBox.getItems().addAll(
             "                  Male", "                 Female", "                 Other");
-        
-        //genderChoice.setItems(FXCollections.observableArrayList(
-           // "                   Gender", "                     Male", "                    Female", "                    Other")); 
+        timeBox.getItems().addAll("                 06:00 am", "                 10:30 am",
+         "                 02:30 pm", "                 07:00 pm", "                 11:00 pm");
+
     }
 
 
@@ -112,13 +112,26 @@ public class Controller {
     }
 
     @FXML
+    public void changeOrigin() {
+        originName = (String) originBox.getValue();
+        originName = originName.replaceAll("\\s", "");
+    }
+
+    @FXML
     public void changeDestination() {
-        //destinationName = destinationField.getText();
+        destinationName = (String) destinationBox.getValue();
+        destinationName = destinationName.replaceAll("\\s", "");
     }
 
     @FXML
     public void changeDepartureTime() {
-        //departureTime = departureField.getText();
+        departureTime = (String) timeBox.getValue();
+        departureTime = departureTime.replaceAll("\\s", "");
+    }
+
+    @FXML
+    public void changeDate() {
+        departureDate = String.valueOf(departDate.getValue());
     }
 
     //End of onChange Event handlers
@@ -152,7 +165,7 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        }
+        } 
         submitForm();
     }
 
@@ -174,16 +187,31 @@ public class Controller {
                     ",\n\tPhone Number: " + phoneNumber +
                     ",\n\tGender: " + gender +
                     ",\n\tAge: " + age +
+                    ",\n\tOrigin: " + originName +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
+                    ",\n\tDeparture Date: " + departureDate +
                     ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
+            storeAllTicketsGenerated();
             System.out.println("Ticket Successfully Generated");
             System.out.println(allTicketsGenerated);
         } catch (IOException e) {
             System.out.println("Error occurred");
+            e.printStackTrace();
+        }
+    }
+
+    private static void storeAllTicketsGenerated() {
+        try {
+            FileWriter writerForStoringAllTickets = new FileWriter("ALL_TICKETS_GENERATED.txt");
+            for (var eachTicket: allTicketsGenerated) {
+                writerForStoringAllTickets.write(eachTicket);
+            }
+            writerForStoringAllTickets.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
