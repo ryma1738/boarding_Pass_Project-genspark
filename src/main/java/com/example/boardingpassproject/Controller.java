@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 public class Controller {
 
@@ -156,7 +157,8 @@ public class Controller {
                     ",\n\tGender: " + genders +
                     ",\n\tAge: " + age +
                     ",\n\tDestination: " + destinationName +
-                    ",\n\tDeparture Time: " + departureTime);
+                    ",\n\tDeparture Time: " + departureTime +
+                    ",\n\tBoarding Pass Number: " + generateTicketNum());
             writer.close();
             System.out.println("Ticket Successfully Generated");
         } catch (IOException e) {
@@ -167,7 +169,7 @@ public class Controller {
 
     private String generateTicketNum() {
         //generate random ticket number that does not match another ticket num
-        return "";
+        return UUID.randomUUID().toString();
     }
 
     private String createPhoneNumber(String value) {
