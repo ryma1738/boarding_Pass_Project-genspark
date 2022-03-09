@@ -57,7 +57,7 @@ public class Controller {
 
     public void initialize() {
         genderBox.getItems().addAll(
-            "                     Male", "                    Female", "                    Other");
+            "                 Male", "                Female", "                Other");
         backgroundImg.setImage(new Image("sky.jpg"));
 
         //genderChoice.setItems(FXCollections.observableArrayList(
