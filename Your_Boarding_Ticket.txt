@@ -7,7 +7,8 @@
 	Phone Number: 123-123-1234,
 	Gender: Male,
 	Age: 23,
-	Destination: null,
+	Origin: NewYork,NY,
+	Destination: Chicago,IL,
 	Departure Time: null,
 	Departure Date: null,
-	Boarding Pass ID: be3d97af-d642-4e21-9987-4a63e287003f
+	Boarding Pass ID: 38511fe0-b490-480e-afad-7bb4a6d680aa

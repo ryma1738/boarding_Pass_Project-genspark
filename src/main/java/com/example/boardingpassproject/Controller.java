@@ -52,6 +52,7 @@ public class Controller {
     public String gender;
     public String age;
     public String departureDate;
+    public String originName;
     public String destinationName;
     public String departureTime;
     public String date;
@@ -111,14 +112,12 @@ public class Controller {
 
     @FXML
     public void changeOrigin() {
-        //destinationName = destinationField.getText();
-        destinationName = (String) originBox.getValue();
+        originName = (String) originBox.getValue();
+        originName = originName.replaceAll("\\s", "");
     }
 
     @FXML
     public void changeDestination() {
-        //destinationName = destinationField.getText();
-        destinationName = (String) destinationBox.getValue();
         destinationName = (String) destinationBox.getValue();
         destinationName = destinationName.replaceAll("\\s", "");
     }
@@ -187,6 +186,7 @@ public class Controller {
                     ",\n\tPhone Number: " + phoneNumber +
                     ",\n\tGender: " + gender +
                     ",\n\tAge: " + age +
+                    ",\n\tOrigin: " + originName +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tDeparture Date: " + date +
@@ -220,9 +220,5 @@ public class Controller {
             drop.getItems().add(i);
         }
     }
-
-
-
-
 
 }
