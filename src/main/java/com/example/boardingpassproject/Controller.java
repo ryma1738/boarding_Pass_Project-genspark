@@ -175,7 +175,7 @@ public class Controller {
             errorLabel.setManaged(true);
             return;
         } else if (origin == null) {
-            errorMessage = "You must choose a origin";
+            errorMessage = "You must choose an origin";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
@@ -193,13 +193,13 @@ public class Controller {
             errorLabel.setManaged(true);
             return;
         } else if (departDate == null) {
-            errorMessage = "You must choose a depart date";
+            errorMessage = "You must choose a departure date";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-
         }
+        System.out.println(getFinalPrice());
         submitForm();
     }
 

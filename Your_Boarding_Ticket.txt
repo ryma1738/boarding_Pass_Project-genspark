@@ -2,13 +2,13 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Michael,
-	Email: michael@gmail.com,
-	Phone Number: 123-123-1254,
+	Name: Jon Bon Jovi,
+	Email: bonjovi82@yahoo.com,
+	Phone Number: 219-333-4567,
 	Gender: Male,
-	Age: 23,
-	Origin: Dallas,TX,
-	Destination: Phoenix,AZ,
-	Departure Time: 07:00pm,
-	Departure Date: 2022-03-18,
-	Boarding Pass ID: ba854f68-08b7-4468-94cc-447523161439
+	Age: 58,
+	Origin: San Diego, CA,
+	Destination: New York, NY,
+	Departure Time: 03:00 pm,
+	Departure Date: null,
+	Boarding Pass ID: faa7a067-9e86-4400-a5d5-b43784779135

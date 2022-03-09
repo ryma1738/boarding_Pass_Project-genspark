@@ -142,3 +142,16 @@
 	Departure Time: 11:00pm,
 	Departure Date: 2022-03-18,
 	Boarding Pass ID: bc7014c9-e00b-4623-8604-9484f6c0c10a
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: Jon Bon Jovi,
+	Email: bonjovi82@yahoo.com,
+	Phone Number: 219-333-4567,
+	Gender: Male,
+	Age: 58,
+	Origin: San Diego, CA,
+	Destination: New York, NY,
+	Departure Time: 03:00 pm,
+	Departure Date: null,
+	Boarding Pass ID: faa7a067-9e86-4400-a5d5-b43784779135
