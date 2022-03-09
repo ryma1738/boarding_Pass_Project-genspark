@@ -51,10 +51,12 @@ public class Controller {
 
 
     public void initialize() {
-        genderBox.getItems().addAll("                     Male", "                    Female", "                    Other");
-        genderChoice.setItems(FXCollections.observableArrayList(
-            "                   Gender", "                     Male", "                    Female", "                    Other"));
+        genderBox.getItems().addAll(
+            "                     Male", "                    Female", "                    Other");
         backgroundImg.setImage(new Image("sky.jpg"));
+
+        //genderChoice.setItems(FXCollections.observableArrayList(
+           // "                   Gender", "                     Male", "                    Female", "                    Other"));
     }
 
     //onChange event handlers
