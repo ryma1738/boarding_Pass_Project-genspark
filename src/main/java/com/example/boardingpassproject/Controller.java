@@ -159,12 +159,6 @@ public class Controller {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } else if (gender == null) {
-            errorMessage = "You must choose a gender";
-            errorLabel.setVisible(true);
-            errorLabel.setText(errorMessage);
-            errorLabel.setManaged(true);
-            return;
         } else if (age == null) {
             errorMessage = "You must choose a age";
             errorLabel.setVisible(true);
@@ -173,6 +167,12 @@ public class Controller {
             return;
         } else if (gender == null) {
             errorMessage = "You must choose a gender";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (departureDate == null) {
+            errorMessage = "You must choose a depart date";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
@@ -191,12 +191,6 @@ public class Controller {
             return;
         } else if (departureTime == null) {
             errorMessage = "You must choose a departure time";
-            errorLabel.setVisible(true);
-            errorLabel.setText(errorMessage);
-            errorLabel.setManaged(true);
-            return;
-        } else if (departDate == null) {
-            errorMessage = "You must choose a depart date";
             errorLabel.setVisible(true);
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);

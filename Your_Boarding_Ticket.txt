@@ -2,13 +2,13 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Michael,
-	Email: michael@gmail.com,
-	Phone Number: 123-123-1254,
+	Name: f,
+	Email: f@gmail.com,
+	Phone Number: 123-123-1223,
 	Gender: Male,
-	Age: 23,
-	Origin: Dallas,TX,
+	Age: 1,
+	Origin: Houston,TX,
 	Destination: Phoenix,AZ,
 	Departure Time: 07:00pm,
-	Departure Date: 2022-03-18,
-	Boarding Pass ID: ba854f68-08b7-4468-94cc-447523161439
+	Departure Date: 2022-03-17,
+	Boarding Pass ID: 784f58cd-5fea-4a3c-b999-bbfbdb422a66
