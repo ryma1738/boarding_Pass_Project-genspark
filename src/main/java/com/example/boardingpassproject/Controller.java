@@ -55,13 +55,12 @@ public class Controller {
     public String originName;
     public String destinationName;
     public String departureTime;
-    public String date;
 
     // storing cities we fly to
     ArrayList<String> cities = new ArrayList<>();
         
     // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
-    public HashSet<String> allTicketsGenerated = new HashSet<>();
+    public static HashSet<String> allTicketsGenerated = new HashSet<>();
 
     public void initialize() {
         backgroundImg.setImage(new Image("sky.jpg"));
@@ -132,7 +131,7 @@ public class Controller {
 
     @FXML
     public void changeDate() {
-        date = departureDate;
+        departureDate = String.valueOf(departDate.getValue());
     }
 
     //End of onChange Event handlers
@@ -191,15 +190,28 @@ public class Controller {
                     ",\n\tOrigin: " + originName +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
-                    ",\n\tDeparture Date: " + date +
+                    ",\n\tDeparture Date: " + departureDate +
                     ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
+            storeAllTicketsGenerated();
             System.out.println("Ticket Successfully Generated");
             System.out.println(allTicketsGenerated);
         } catch (IOException e) {
             System.out.println("Error occurred");
+            e.printStackTrace();
+        }
+    }
+
+    private static void storeAllTicketsGenerated() {
+        try {
+            FileWriter writerForStoringAllTickets = new FileWriter("ALL_TICKETS_GENERATED.txt");
+            for (var eachTicket: allTicketsGenerated) {
+                writerForStoringAllTickets.write(eachTicket);
+            }
+            writerForStoringAllTickets.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
