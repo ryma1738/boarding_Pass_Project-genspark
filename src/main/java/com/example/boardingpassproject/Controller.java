@@ -1,10 +1,14 @@
 package com.example.boardingpassproject;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Controller {
 
@@ -14,8 +18,8 @@ public class Controller {
     public TextField emailField;
     @FXML
     public TextField phoneNumberField;
-    @FXML
-    public TextField genderField;
+    //@FXML
+    //public TextField genderField;
     @FXML
     public TextField ageField;
     @FXML
@@ -24,11 +28,14 @@ public class Controller {
     public TextField departureField;
     @FXML
     public Label errorLabel;
-
     @FXML
     public Button ticketButton;
     @FXML
-    public Image backgroundImg;
+    public ImageView backgroundImg;
+    @FXML
+    public ComboBox genderBox;
+    @FXML
+    public ChoiceBox genderChoice;
 
 
 
@@ -44,13 +51,14 @@ public class Controller {
 
 
     public void initialize() {
-        //backgroundImg.setImage(new Image("sky.jpg"));
+        genderBox.getItems().addAll("                     Male", "                    Female", "                    Other");
+        genderChoice.setItems(FXCollections.observableArrayList(
+            "                   Gender", "                     Male", "                    Female", "                    Other"));
+        backgroundImg.setImage(new Image("sky.jpg"));
     }
 
-
-
-
     //onChange event handlers
+
     @FXML
     public void changeName() {
         name = nameField.getText();
@@ -77,7 +85,7 @@ public class Controller {
 
     @FXML
     public void changeGender() {
-        genders = genderField.getText();
+        //genders = genderField.getText();
     }
 
     @FXML
@@ -119,7 +127,7 @@ public class Controller {
             errorLabel.setVisible(true);
             errorLabel.setManaged(true);
             return;
-        } 
+        }
         submitForm();
     }
 
