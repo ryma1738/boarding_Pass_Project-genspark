@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 
-public class Controller{
+public class Controller {
 
     @FXML
     public ImageView backgroundImg;
@@ -162,6 +162,43 @@ public class Controller{
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
+        } else if (age == null) {
+            errorMessage = "You must choose a age";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (gender == null) {
+            errorMessage = "You must choose a gender";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (origin == null) {
+            errorMessage = "You must choose a origin";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (destination == null) {
+            errorMessage = "You must choose a destination";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (departureTime == null) {
+            errorMessage = "You must choose a departure time";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+        } else if (departDate == null) {
+            errorMessage = "You must choose a depart date";
+            errorLabel.setVisible(true);
+            errorLabel.setText(errorMessage);
+            errorLabel.setManaged(true);
+            return;
+
         }
         submitForm();
     }

@@ -103,3 +103,42 @@
 	Departure Time: 02:30pm,
 	Departure Date: 2022-03-17,
 	Boarding Pass ID: cf5905ea-b978-4ca6-a81e-0273b911d398
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: Ann,
+	Email: ann@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Female,
+	Age: 23,
+	Origin: Houston,TX,
+	Destination: Philadelphia,PA,
+	Departure Time: 11:00pm,
+	Departure Date: 2022-03-18,
+	Boarding Pass ID: bc7014c9-e00b-4623-8604-9484f6c0c10a
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: Michael,
+	Email: michael@gmail.com,
+	Phone Number: 123-123-1254,
+	Gender: Male,
+	Age: 23,
+	Origin: Dallas,TX,
+	Destination: Phoenix,AZ,
+	Departure Time: 07:00pm,
+	Departure Date: 2022-03-18,
+	Boarding Pass ID: ba854f68-08b7-4468-94cc-447523161439
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: Ann,
+	Email: ann@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Female,
+	Age: 23,
+	Origin: Houston,TX,
+	Destination: Philadelphia,PA,
+	Departure Time: 11:00pm,
+	Departure Date: 2022-03-18,
+	Boarding Pass ID: bc7014c9-e00b-4623-8604-9484f6c0c10a
