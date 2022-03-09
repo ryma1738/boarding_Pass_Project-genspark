@@ -11,6 +11,9 @@ import javafx.scene.image.ImageView;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -169,6 +172,7 @@ public class Controller{
     public void submitForm() {
         // compile contents into files and generate ticket
         Utils.createTicket();
+        Utils.createFileForStoringAllTickets();
         writeOverTicket();
         errorLabel.setVisible(false);
     }
@@ -203,11 +207,9 @@ public class Controller{
 
     private static void storeAllTicketsGenerated() {
         try {
-            FileWriter writerForStoringAllTickets = new FileWriter("ALL_TICKETS_GENERATED.txt");
             for (var eachTicket: allTicketsGenerated) {
-                writerForStoringAllTickets.write(eachTicket);
+                Files.write(Paths.get("ALL_TICKETS_GENERATED.txt"), eachTicket.getBytes(), StandardOpenOption.APPEND);
             }
-            writerForStoringAllTickets.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
