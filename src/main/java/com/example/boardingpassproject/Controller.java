@@ -52,8 +52,10 @@ public class Controller {
     public String gender;
     public String age;
     public String departureDate;
+    public String originName;
     public String destinationName;
     public String departureTime;
+    public String date;
 
     // storing cities we fly to
     ArrayList<String> cities = new ArrayList<>();
@@ -71,6 +73,7 @@ public class Controller {
             "                  Male", "                 Female", "                 Other");
         timeBox.getItems().addAll("                 06:00 am", "                 10:30 am",
          "                 02:30 pm", "                 07:00 pm", "                 11:00 pm");
+
     }
 
 
@@ -111,6 +114,12 @@ public class Controller {
     }
 
     @FXML
+    public void changeOrigin() {
+        originName = (String) originBox.getValue();
+        originName = originName.replaceAll("\\s", "");
+    }
+
+    @FXML
     public void changeDestination() {
         destinationName = (String) destinationBox.getValue();
         destinationName = destinationName.replaceAll("\\s", "");
@@ -122,6 +131,10 @@ public class Controller {
         departureTime = departureTime.replaceAll("\\s", "");
     }
 
+    @FXML
+    public void changeDate() {
+        date = departureDate;
+    }
 
     //End of onChange Event handlers
 
@@ -176,8 +189,10 @@ public class Controller {
                     ",\n\tPhone Number: " + phoneNumber +
                     ",\n\tGender: " + gender +
                     ",\n\tAge: " + age +
+                    ",\n\tOrigin: " + originName +
                     ",\n\tDestination: " + destinationName +
                     ",\n\tDeparture Time: " + departureTime +
+                    ",\n\tDeparture Date: " + date +
                     ",\n\tBoarding Pass ID: " + Utils.generateTicketNum();
             writer.write(ticketData);
             writer.close();
@@ -208,9 +223,5 @@ public class Controller {
             drop.getItems().add(i);
         }
     }
-
-
-
-
 
 }
