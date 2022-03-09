@@ -20,7 +20,8 @@ public class Utils {
         "Phoenix, AZ : San Antonio, TX", "Phoenix, AZ : San Diego, CA", "Phoenix, AZ : Dallas, TX", "Phoenix, AZ : San Jose, CA",
         "Philadelphia, PA : San Antonio, TX", "Philadelphia, PA : San Diego, CA", "Philadelphia, PA : Dallas, TX",
         "Philadelphia, PA : San Jose, CA", "San Antonio, TX : San Diego, CA", "San Antonio, TX : Dallas, TX", 
-        "San Antonio, TX : San Jose, CA", "San Diego, CA : Dallas, TX", "San Diego, CA : San Jose, CA", "Dallas, TX : San Jose, CA",}); // use contains
+        "San Antonio, TX : San Jose, CA", "San Diego, CA : Dallas, TX", "San Diego, CA : San Jose, CA", "Dallas, TX : San Jose, CA"}); // use contains
+        
     private final static int[] travelTime = new int[]{380, 160, 250, 345, 60, 265, 375, 245, 410, 240, 190, 85, 300, 165, 60, 175, 75, 170, 230,
     114, 180, 265, 150, 280, 175, 200, 65, 215, 75, 260, 265, 180, 70, 135, 120, 319, 363, 220, 470, 185, 75, 308, 149, 85, 240};
     
