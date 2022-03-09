@@ -20,7 +20,7 @@
         <TextField fx:id="destinationField" alignment="CENTER" layoutX="121.0" layoutY="275.0" onKeyTyped="#changeDestination" promptText="Destination" />
         <Button fx:id="ticketButton" layoutX="130.0" layoutY="422.0" mnemonicParsing="false" onAction="#checkFormContents" prefHeight="26.0" prefWidth="145.5" text="Generate Ticket" />
         <DatePicker layoutX="121.0" layoutY="355.0" prefWidth="159.5" promptText="                 Date" />
-        <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="301.0" onKeyTyped="#changeDepartureTime" promptText="Departure Time" />
+        <TextField fx:id="departureField" alignment="CENTER" layoutX="121.0" layoutY="316.0" onKeyTyped="#changeDepartureTime" promptText="Departure Time" />
         <Label fx:id="errorLabel" alignment="CENTER" layoutX="70.0" layoutY="387.0" prefHeight="33.0" prefWidth="256.0" style="-fx-background-color: #dc3545;" text="ERROR MESSAGE:  " textAlignment="CENTER" visible="false">
             <font>
                 <Font name="System Bold" size="12.0" />
