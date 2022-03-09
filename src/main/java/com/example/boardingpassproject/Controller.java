@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -38,7 +39,9 @@ public class Controller {
     public ImageView backgroundImg;
     @FXML
     public ComboBox genderBox;
-    
+    @FXML
+    public DatePicker departDate;
+
     @FXML
     public ChoiceBox genderChoice;
 
@@ -60,7 +63,7 @@ public class Controller {
 
     public void initialize() {
         genderBox.getItems().addAll(
-            "                 Male", "                Female", "                Other");
+            "                     Male", "                    Female", "                    Other");
         backgroundImg.setImage(new Image("sky.jpg"));
 
         //genderChoice.setItems(FXCollections.observableArrayList(
