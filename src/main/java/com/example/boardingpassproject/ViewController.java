@@ -1,6 +1,8 @@
 package com.example.boardingpassproject;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -8,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -19,8 +22,15 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 
-public class Controller {
+public class ViewController {
+    Stage prevStage;
 
+    public void setPrevStage(Stage stage) {
+        this.prevStage = stage;
+    }
+
+
+    //scene 1
     @FXML
     public ImageView backgroundImg;
     @FXML
@@ -46,6 +56,9 @@ public class Controller {
     @FXML
     public Button ticketButton;
 
+    
+
+    //scene 1
     public String errorMessage;
     public String name;
     public String email;
@@ -56,6 +69,8 @@ public class Controller {
     public String origin;
     public String destination;
     public String departureTime;
+    public String ticketData;
+
 
     // storing cities we fly to
     ArrayList<String> cities = new ArrayList<>();
@@ -71,6 +86,18 @@ public class Controller {
         genderBox.getItems().addAll("Male", "Female", "Other");
         timeBox.getItems().addAll("06:00 am", "10:30 am", "03:00 pm", "07:30 pm", "12:00 am");
 
+    }
+
+    // Create scene two
+
+    public void switchToScene2() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view-2.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Ticket Generator");
+        stage.getIcons().add(new Image("plane.png"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 
 
@@ -136,7 +163,7 @@ public class Controller {
     //End of onChange Event handlers
 
     @FXML
-    public void checkFormContents() {
+    public void checkFormContents() throws IOException {
         errorMessage = "";
         // if error occurs set error msg visibility
         Boolean error = false;
@@ -207,9 +234,10 @@ public class Controller {
     }
 
     private void writeOverTicket() {
+        String ticketText = "";
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
-            String ticketData = "\n\t*******************" +
+            ticketData = "\n\t*******************" +
                     "\n\t| Boarding Ticket |" +
                     "\n\t*******************" +
                     "\n\tName: " + name +
@@ -227,9 +255,8 @@ public class Controller {
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
-            storeAllTicketsGenerated();
-            System.out.println("Ticket Successfully Generated");
-            System.out.println(allTicketsGenerated);
+            storeAllTicketsGenerated();  
+            switchToScene2();       
         } catch (IOException e) {
             System.out.println("Error occurred");
             e.printStackTrace();
@@ -302,4 +329,5 @@ public class Controller {
         if(gender.equals("female")) return (int) (getSubTotal() * .25f);
         return getSubTotal();
     }
+
 }

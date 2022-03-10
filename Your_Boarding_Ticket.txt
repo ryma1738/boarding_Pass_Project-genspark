@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: asdf324,
-	Email: 1324@gmail.com,
-	Phone Number: 234-654-1325,
-	Gender: Other,
-	Age: 76,
+	Name: Joe Dothisagain,
+	Email: rogers@gmail.com,
+	Phone Number: 384-736-3847,
+	Gender: Female,
+	Age: 46,
 	Origin: Houston, TX,
 	Destination: San Diego, CA,
-	Departure Time: 03:00 pm,
-	Departure Date: 03-23-2022,
-	Boarding Pass ID: ce65caec-e806-4383-9844-17fe9774e99a,
-	Ticket Price: $95,
+	Departure Time: 06:00 am,
+	Departure Date: 03-22-2022,
+	Boarding Pass ID: cdf17b97-3eff-40ca-8da9-6a649be8b8aa,
+	Ticket Price: $165,
 	Estimated Time of Arrival: 215 minutes
