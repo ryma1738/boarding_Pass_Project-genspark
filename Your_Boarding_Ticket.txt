@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Johnny Gators,
-	Email: johnnygators246@longemailtestgoogle.com,
-	Phone Number: 756-483-7465,
+	Name: Harry Rhino,
+	Email: rhinodyno3@gmail.com,
+	Phone Number: 467-364-5273,
 	Gender: Other,
-	Age: 56,
-	Origin: Phoenix, AZ,
-	Destination: San Antonio, TX,
-	Departure Time: 03:00 pm,
-	Departure Date: 04-18-2022,
-	Boarding Pass ID: 9c4746c0-efa5-4a1c-b7bd-2f897631ad64,
-	Ticket Price: $132,
-	Estimated Time of Arrival: 180 minutes
+	Age: 72,
+	Origin: San Jose, CA,
+	Destination: San Diego, CA,
+	Departure Time: 12:00 am,
+	Departure Date: 05-04-2022,
+	Boarding Pass ID: 098963da-8f20-48c1-b721-2051e7c3ef6a,
+	Ticket Price: $90,
+	Estimated Time of Arrival: 85 minutes
