@@ -34,15 +34,15 @@ public class Controller {
     @FXML
     public TextField ageField;
     @FXML
-    public ComboBox genderBox;
+    public ComboBox<String> genderBox;
     @FXML
     public DatePicker departDate;
     @FXML
-    public ComboBox originBox;
+    public ComboBox<String> originBox;
     @FXML
-    public ComboBox destinationBox;
+    public ComboBox<String> destinationBox;
     @FXML
-    public ComboBox timeBox;
+    public ComboBox<String> timeBox;
     @FXML
     public Label errorLabel;
     @FXML

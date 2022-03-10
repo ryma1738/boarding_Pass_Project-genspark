@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -18,6 +19,7 @@ public class App extends Application {
         stage.setTitle("Ticket Generator");
         stage.getIcons().add(new Image("plane.png"));
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
