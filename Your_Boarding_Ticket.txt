@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Ricky Green,
-	Email: thegreemmachine@yahoo.com,
-	Phone Number: 498-573-6453,
-	Gender: Female,
-	Age: 31,
-	Origin: San Jose, CA,
-	Destination: Dallas, TX,
-	Departure Time: 12:00 am,
-	Departure Date: 06-06-2022,
-	Boarding Pass ID: 1a8e4c88-bf32-4f28-b4a4-015d42093c9f,
-	Ticket Price: $300,
-	Estimated Time of Arrival: 240 minutes
+	Name: Thomas the Train,
+	Email: flying@gmail.com,
+	Phone Number: 746-485-6478,
+	Gender: Male,
+	Age: 12,
+	Origin: Philadelphia, PA,
+	Destination: Chicago, IL,
+	Departure Time: 03:00 pm,
+	Departure Date: 04-02-2022,
+	Boarding Pass ID: 7b491290-84f7-47dd-b4eb-e723c803d62f,
+	Ticket Price: $53,
+	Estimated Time of Arrival: 114 minutes

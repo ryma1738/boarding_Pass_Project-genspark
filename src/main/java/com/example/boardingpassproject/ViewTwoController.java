@@ -47,6 +47,7 @@ public class ViewTwoController {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(fxmlLoader.load());
+        ViewController.setPrevStage(stage);
         scene.getStylesheets().add("styleSheet.css");
         stage.setTitle("Ticket Generator");
         stage.getIcons().add(new Image("plane.png"));
