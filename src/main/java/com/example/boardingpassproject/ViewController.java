@@ -98,6 +98,28 @@ public class ViewController {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
+        resetForm();
+    }
+
+    private void resetForm() {
+        errorMessage = "";
+        name = "";
+        email = "";
+        phoneNumber = "";
+        gender = "";
+        age = "";
+        departureDate = "";
+        origin = "";
+        destination ="";
+        departureTime = "";
+        nameField.setText("");
+        emailField.setText("");
+        phoneNumberField.setText("");
+        ageField.setText("");
+        genderBox.getSelectionModel().select("Gender");
+        originBox.getSelectionModel().select("Origin");
+        destinationBox.getSelectionModel().select("Destination");
+        timeBox.getSelectionModel().select("Time");
     }
 
 

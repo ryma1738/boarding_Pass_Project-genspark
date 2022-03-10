@@ -14,3 +14,16 @@
 	Boarding Pass ID: 098963da-8f20-48c1-b721-2051e7c3ef6a,
 	Ticket Price: $90,
 	Estimated Time of Arrival: 85 minutes
+
+	Name: bro,
+	Email: bro@gmail.com,
+	Phone Number: 324-532-3253,
+	Gender: Female,
+	Age: 34,
+	Origin: New York, NY,
+	Destination: Los Angeles, CA,
+	Departure Time: 03:00 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: cba00cee-0240-46ba-8a8b-72cb05d2d5a8,
+	Ticket Price: $238,
+	Estimated Time of Arrival: 380 minutes
