@@ -2919,3 +2919,35 @@
 	Boarding Pass ID: 9c4746c0-efa5-4a1c-b7bd-2f897631ad64,
 	Ticket Price: $132,
 	Estimated Time of Arrival: 180 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: Brandon Nguyen,
+	Email: brandon.nguyen330@gmail.com,
+	Phone Number: 123-123-1234,
+	Gender: Male,
+	Age: 43,
+	Origin: New York, NY,
+	Destination: Los Angeles, CA,
+	Departure Time: 03:00 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: aecc3608-1c78-421b-bf3d-dbc84d407d0d,
+	Ticket Price: $79,
+	Estimated Time of Arrival: -1 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: bro,
+	Email: bro@gmail.com,
+	Phone Number: 324-532-3253,
+	Gender: Female,
+	Age: 34,
+	Origin: New York, NY,
+	Destination: Los Angeles, CA,
+	Departure Time: 03:00 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: cba00cee-0240-46ba-8a8b-72cb05d2d5a8,
+	Ticket Price: $238,
+	Estimated Time of Arrival: 380 minutes

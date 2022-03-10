@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Johnny Gators,
-	Email: johnnygators246@longemailtestgoogle.com,
-	Phone Number: 756-483-7465,
-	Gender: Other,
-	Age: 56,
-	Origin: Phoenix, AZ,
-	Destination: San Antonio, TX,
+	Name: bro,
+	Email: bro@gmail.com,
+	Phone Number: 324-532-3253,
+	Gender: Female,
+	Age: 34,
+	Origin: New York, NY,
+	Destination: Los Angeles, CA,
 	Departure Time: 03:00 pm,
-	Departure Date: 04-18-2022,
-	Boarding Pass ID: 9c4746c0-efa5-4a1c-b7bd-2f897631ad64,
-	Ticket Price: $132,
-	Estimated Time of Arrival: 180 minutes
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: cba00cee-0240-46ba-8a8b-72cb05d2d5a8,
+	Ticket Price: $238,
+	Estimated Time of Arrival: 380 minutes

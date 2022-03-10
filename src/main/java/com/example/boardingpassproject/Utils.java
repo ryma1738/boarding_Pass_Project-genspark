@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class Utils {
     private final static ArrayList<String> locationCombos = new ArrayList<>(Arrays.asList(new String[]{
-        "New York, Ny : Los Angeles, CA", "New York, NY : Chicago, IL", "New York, NY : Houston, TX", "New York, NY : Phoenix, AZ",
+        "New York, NY : Los Angeles, CA", "New York, NY : Chicago, IL", "New York, NY : Houston, TX", "New York, NY : Phoenix, AZ",
         "New York, NY : Philadelphia, PA", "New York, NY : San Antonio, TX", "New York, NY : San Diego, CA", "New York, NY : Dallas, TX",
         "New York, NY : San Jose, CA", "Los Angeles, CA : Chicago, IL", "Los Angeles, CA : Houston, TX", "Los Angeles, CA : Phoenix, AZ",
         "Los Angeles, CA : Philadelphia, PA", "Los Angeles, CA : San Antonio, TX", "Los Angeles, CA : San Diego, CA",
