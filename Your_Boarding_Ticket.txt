@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Johnny Gators,
-	Email: johnnygators246@longemailtestgoogle.com,
-	Phone Number: 756-483-7465,
-	Gender: Other,
-	Age: 56,
-	Origin: Phoenix, AZ,
-	Destination: San Antonio, TX,
-	Departure Time: 03:00 pm,
-	Departure Date: 04-18-2022,
-	Boarding Pass ID: 9c4746c0-efa5-4a1c-b7bd-2f897631ad64,
-	Ticket Price: $132,
-	Estimated Time of Arrival: 180 minutes
+	Name: df;alksjdf,
+	Email: asdfasd@gmial.com,
+	Phone Number: 654-654-6544,
+	Gender: Female,
+	Age: 54,
+	Origin: Chicago, IL,
+	Destination: Dallas, TX,
+	Departure Time: 07:30 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: de889dd9-f728-409d-a82d-67b96f74a5aa,
+	Ticket Price: $104,
+	Estimated Time of Arrival: 150 minutes
