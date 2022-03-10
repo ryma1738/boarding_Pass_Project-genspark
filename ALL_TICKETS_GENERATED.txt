@@ -2103,3 +2103,163 @@
 	Boarding Pass ID: b5c94a69-f508-4c14-92e7-c685524856f6,
 	Ticket Price: $124,
 	Estimated Time of Arrival: 319 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Male,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 8c925b9c-56bc-46dc-9167-0469d10294e2,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 9cc15a13-7e24-4279-9e79-e5f1b4319c56,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Male,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 8c925b9c-56bc-46dc-9167-0469d10294e2,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
+	Age: 65,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 89ac9cb8-b6c7-470f-953d-afbde435f098,
+	Ticket Price: $79,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 9cc15a13-7e24-4279-9e79-e5f1b4319c56,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Male,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 8c925b9c-56bc-46dc-9167-0469d10294e2,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
+	Age: 65,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 89ac9cb8-b6c7-470f-953d-afbde435f098,
+	Ticket Price: $79,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
+	Age: 65,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 12:00 am,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 4b64544c-08a7-4fb2-bc33-9121af38a466,
+	Ticket Price: $150,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 9cc15a13-7e24-4279-9e79-e5f1b4319c56,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Male,
+	Age: 23,
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 03:00 pm,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 8c925b9c-56bc-46dc-9167-0469d10294e2,
+	Ticket Price: $132,
+	Estimated Time of Arrival: 190 minutes

@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: asfd,
-	Email: asdf@gmail.com,
-	Phone Number: 432-543-1253,
-	Gender: Male,
+	Name: testing1345,
+	Email: 324@gmail.com,
+	Phone Number: 123-123-1235,
+	Gender: Female,
 	Age: 65,
-	Origin: Philadelphia, PA,
-	Destination: San Antonio, TX,
-	Departure Time: 07:30 pm,
-	Departure Date: 2022-03-18,
-	Boarding Pass ID: b5c94a69-f508-4c14-92e7-c685524856f6,
-	Ticket Price: $124,
-	Estimated Time of Arrival: 319 minutes
+	Origin: Los Angeles, CA,
+	Destination: Houston, TX,
+	Departure Time: 12:00 am,
+	Departure Date: 2022-03-16,
+	Boarding Pass ID: 4b64544c-08a7-4fb2-bc33-9121af38a466,
+	Ticket Price: $150,
+	Estimated Time of Arrival: 190 minutes
