@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: testing1345,
-	Email: 324@gmail.com,
-	Phone Number: 123-123-1235,
-	Gender: Female,
-	Age: 65,
-	Origin: Los Angeles, CA,
-	Destination: Houston, TX,
-	Departure Time: 12:00 am,
-	Departure Date: 2022-03-16,
-	Boarding Pass ID: 4b64544c-08a7-4fb2-bc33-9121af38a466,
-	Ticket Price: $150,
-	Estimated Time of Arrival: 190 minutes
+	Name: asdf324,
+	Email: 1324@gmail.com,
+	Phone Number: 234-654-1325,
+	Gender: Other,
+	Age: 76,
+	Origin: Houston, TX,
+	Destination: San Diego, CA,
+	Departure Time: 03:00 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: ce65caec-e806-4383-9844-17fe9774e99a,
+	Ticket Price: $95,
+	Estimated Time of Arrival: 215 minutes

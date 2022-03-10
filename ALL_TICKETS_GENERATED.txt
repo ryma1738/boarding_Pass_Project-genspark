@@ -2263,3 +2263,19 @@
 	Boarding Pass ID: 8c925b9c-56bc-46dc-9167-0469d10294e2,
 	Ticket Price: $132,
 	Estimated Time of Arrival: 190 minutes
+
+	*******************
+	| Boarding Ticket |
+	*******************
+	Name: asdf324,
+	Email: 1324@gmail.com,
+	Phone Number: 234-654-1325,
+	Gender: Other,
+	Age: 76,
+	Origin: Houston, TX,
+	Destination: San Diego, CA,
+	Departure Time: 03:00 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: ce65caec-e806-4383-9844-17fe9774e99a,
+	Ticket Price: $95,
+	Estimated Time of Arrival: 215 minutes

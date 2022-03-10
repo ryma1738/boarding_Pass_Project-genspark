@@ -14,7 +14,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 
 
@@ -128,7 +131,8 @@ public class Controller {
 
     @FXML
     public void changeDate() {
-        departureDate = String.valueOf(departDate.getValue());
+        LocalDate date = departDate.getValue();
+        departureDate = date.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
     }
 
     //End of onChange Event handlers
