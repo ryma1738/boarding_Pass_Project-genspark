@@ -116,6 +116,7 @@ public class ViewController {
         emailField.setText("");
         phoneNumberField.setText("");
         ageField.setText("");
+        departDate.getEditor().clear();
         genderBox.getSelectionModel().select("Gender");
         originBox.getSelectionModel().select("Origin");
         destinationBox.getSelectionModel().select("Destination");
