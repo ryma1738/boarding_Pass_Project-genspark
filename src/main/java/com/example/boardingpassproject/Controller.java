@@ -16,9 +16,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
+import java.util.*;
 
 
 public class Controller {
@@ -262,6 +260,7 @@ public class Controller {
     }
 
     private void addCitiesToDrop(ComboBox drop) {
+        Collections.sort(cities);
         for(String i : cities) {
             drop.getItems().add(i);
         }
