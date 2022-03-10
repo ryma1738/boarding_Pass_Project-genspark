@@ -23,14 +23,13 @@ import java.util.*;
 
 
 public class ViewController {
-    Stage prevStage;
+    public static Stage prevStage;
 
-    public void setPrevStage(Stage stage) {
-        this.prevStage = stage;
+    public static void setPrevStage(Stage stage) {
+        prevStage = stage;
     }
 
 
-    //scene 1
     @FXML
     public ImageView backgroundImg;
     @FXML
@@ -57,8 +56,6 @@ public class ViewController {
     public Button ticketButton;
 
     
-
-    //scene 1
     public String errorMessage;
     public String name;
     public String email;
@@ -97,29 +94,8 @@ public class ViewController {
         stage.getIcons().add(new Image("plane.png"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        prevStage.close();
         stage.show();
-        resetForm();
-    }
-
-    private void resetForm() {
-        errorMessage = "";
-        name = "";
-        email = "";
-        phoneNumber = "";
-        gender = "";
-        age = "";
-        departureDate = "";
-        origin = "";
-        destination ="";
-        departureTime = "";
-        nameField.setText("");
-        emailField.setText("");
-        phoneNumberField.setText("");
-        ageField.setText("");
-        genderBox.getSelectionModel().select("Gender");
-        originBox.getSelectionModel().select("Origin");
-        destinationBox.getSelectionModel().select("Destination");
-        timeBox.getSelectionModel().select("Time");
     }
 
 
@@ -142,13 +118,10 @@ public class ViewController {
         Utils.phoneChecker(phoneNumber);
         phoneNumberField.setText(phoneNumber);
         phoneNumberField.positionCaret(phoneNumber.length());
-
     }
 
     @FXML
     public void changeGender() {
-        // Gets value from genderBox and type casts to string
-        // Then removes all white space from combo box placeholder text
         gender = (String) genderBox.getValue();
     
     }

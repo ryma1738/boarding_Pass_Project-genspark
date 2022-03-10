@@ -2,28 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Harry Rhino,
-	Email: rhinodyno3@gmail.com,
-	Phone Number: 467-364-5273,
-	Gender: Other,
-	Age: 72,
-	Origin: San Jose, CA,
-	Destination: San Diego, CA,
-	Departure Time: 12:00 am,
-	Departure Date: 05-04-2022,
-	Boarding Pass ID: 098963da-8f20-48c1-b721-2051e7c3ef6a,
-	Ticket Price: $90,
-	Estimated Time of Arrival: 85 minutes
-
-	Name: bro,
-	Email: bro@gmail.com,
-	Phone Number: 324-532-3253,
+	Name: Ricky Green,
+	Email: thegreemmachine@yahoo.com,
+	Phone Number: 498-573-6453,
 	Gender: Female,
-	Age: 34,
-	Origin: New York, NY,
-	Destination: Los Angeles, CA,
-	Departure Time: 03:00 pm,
-	Departure Date: 03-23-2022,
-	Boarding Pass ID: cba00cee-0240-46ba-8a8b-72cb05d2d5a8,
-	Ticket Price: $238,
-	Estimated Time of Arrival: 380 minutes
+	Age: 31,
+	Origin: San Jose, CA,
+	Destination: Dallas, TX,
+	Departure Time: 12:00 am,
+	Departure Date: 06-06-2022,
+	Boarding Pass ID: 1a8e4c88-bf32-4f28-b4a4-015d42093c9f,
+	Ticket Price: $300,
+	Estimated Time of Arrival: 240 minutes

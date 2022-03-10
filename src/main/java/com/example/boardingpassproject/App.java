@@ -5,15 +5,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App extends Application {
+    
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("view.fxml"));
+        ViewController.setPrevStage(stage);
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add("styleSheet.css");
         stage.setTitle("Ticket Generator");
