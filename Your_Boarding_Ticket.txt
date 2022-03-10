@@ -2,15 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: df;alksjdf,
-	Email: asdfasd@gmial.com,
-	Phone Number: 654-654-6544,
+	Name: bro,
+	Email: bro@gmail.com,
+	Phone Number: 324-532-3253,
 	Gender: Female,
-	Age: 54,
-	Origin: Chicago, IL,
-	Destination: Dallas, TX,
-	Departure Time: 07:30 pm,
+	Age: 34,
+	Origin: New York, NY,
+	Destination: Los Angeles, CA,
+	Departure Time: 03:00 pm,
 	Departure Date: 03-23-2022,
-	Boarding Pass ID: de889dd9-f728-409d-a82d-67b96f74a5aa,
-	Ticket Price: $104,
-	Estimated Time of Arrival: 150 minutes
+	Boarding Pass ID: cba00cee-0240-46ba-8a8b-72cb05d2d5a8,
+	Ticket Price: $238,
+	Estimated Time of Arrival: 380 minutes
