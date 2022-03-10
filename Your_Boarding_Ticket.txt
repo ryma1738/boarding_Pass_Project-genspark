@@ -2,14 +2,15 @@
 	*******************
 	| Boarding Ticket |
 	*******************
-	Name: Sam Williams,
-	Email: samtheman@hotmail.com,
-	Phone Number: 657-445-3345,
-	Gender: Male,
-	Age: 11,
-	Origin: Los Angeles, CA,
-	Destination: Phoenix, AZ,
-	Departure Time: 10:30 am,
-	Departure Date: 2022-03-26,
-	Boarding Pass ID: 5b161818-0cab-4d93-8dcd-c425ddc7d920,
-	Ticket Price: $40
+	Name: asdf324,
+	Email: 1324@gmail.com,
+	Phone Number: 234-654-1325,
+	Gender: Other,
+	Age: 76,
+	Origin: Houston, TX,
+	Destination: San Diego, CA,
+	Departure Time: 03:00 pm,
+	Departure Date: 03-23-2022,
+	Boarding Pass ID: ce65caec-e806-4383-9844-17fe9774e99a,
+	Ticket Price: $95,
+	Estimated Time of Arrival: 215 minutes

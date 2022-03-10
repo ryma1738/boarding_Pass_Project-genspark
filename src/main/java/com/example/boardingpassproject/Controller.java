@@ -14,8 +14,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 
 public class Controller {
@@ -31,15 +32,15 @@ public class Controller {
     @FXML
     public TextField ageField;
     @FXML
-    public ComboBox genderBox;
+    public ComboBox<String> genderBox;
     @FXML
     public DatePicker departDate;
     @FXML
-    public ComboBox originBox;
+    public ComboBox<String> originBox;
     @FXML
-    public ComboBox destinationBox;
+    public ComboBox<String> destinationBox;
     @FXML
-    public ComboBox timeBox;
+    public ComboBox<String> timeBox;
     @FXML
     public Label errorLabel;
     @FXML
@@ -128,7 +129,8 @@ public class Controller {
 
     @FXML
     public void changeDate() {
-        departureDate = String.valueOf(departDate.getValue());
+        LocalDate date = departDate.getValue();
+        departureDate = date.format(DateTimeFormatter.ofPattern("MM-dd-yyyy"));
     }
 
     //End of onChange Event handlers
@@ -220,7 +222,8 @@ public class Controller {
                     ",\n\tDeparture Time: " + departureTime +
                     ",\n\tDeparture Date: " + departureDate +
                     ",\n\tBoarding Pass ID: " + Utils.generateTicketNum() +
-                    ",\n\tTicket Price: $" + getFinalPrice();
+                    ",\n\tTicket Price: $" + getFinalPrice() +
+                    ",\n\tEstimated Time of Arrival: " + Utils.findTravelTime(origin, destination) + " minutes\n";
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
@@ -257,6 +260,7 @@ public class Controller {
     }
 
     private void addCitiesToDrop(ComboBox drop) {
+        Collections.sort(cities);
         for(String i : cities) {
             drop.getItems().add(i);
         }
