@@ -55,7 +55,7 @@ public class ViewController {
     @FXML
     public Button ticketButton;
 
-    
+
     public String errorMessage;
     public String name;
     public String email;
@@ -66,12 +66,12 @@ public class ViewController {
     public String origin;
     public String destination;
     public String departureTime;
-    public String ticketData;
+    private  static String ticketData;
 
 
     // storing cities we fly to
     ArrayList<String> cities = new ArrayList<>();
-        
+
     // Use HashSet as our DataStructure to store all tickets generated because no duplicate values.
     public static HashSet<String> allTicketsGenerated = new HashSet<>();
 
@@ -94,11 +94,12 @@ public class ViewController {
         stage.getIcons().add(new Image("plane.png"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.setResizable(false);
         prevStage.close();
         stage.show();
     }
 
-   
+
     //onChange event handlers
 
     @FXML
@@ -106,7 +107,7 @@ public class ViewController {
         name = nameField.getText();
     }
 
-    @FXML 
+    @FXML
     public void changeEmail() {
         email = emailField.getText();
     }
@@ -123,7 +124,7 @@ public class ViewController {
     @FXML
     public void changeGender() {
         gender = (String) genderBox.getValue();
-    
+
     }
 
     @FXML
@@ -134,19 +135,19 @@ public class ViewController {
     @FXML
     public void changeOrigin() {
         origin = (String) originBox.getValue();
-        
+
     }
 
     @FXML
     public void changeDestination() {
         destination = (String) destinationBox.getValue();
-        
+
     }
 
     @FXML
     public void changeDepartureTime() {
         departureTime = (String) timeBox.getValue();
-        
+
     }
 
     @FXML
@@ -161,7 +162,6 @@ public class ViewController {
     public void checkFormContents() throws IOException {
         errorMessage = "";
         // if error occurs set error msg visibility
-        Boolean error = false;
         if (name == null) {
             errorMessage = "You must enter a name";
             errorLabel.setVisible(true);
@@ -216,20 +216,20 @@ public class ViewController {
             errorLabel.setText(errorMessage);
             errorLabel.setManaged(true);
             return;
-        } 
+        }
         submitForm();
     }
 
-    public void submitForm() {
+    public void submitForm() throws IOException {
         // compile contents into files and generate ticket
         Utils.createTicket();
         Utils.createFileForStoringAllTickets();
         writeOverTicket();
+        switchToScene2();
         errorLabel.setVisible(false);
     }
 
     private void writeOverTicket() {
-        String ticketText = "";
         try {
             FileWriter writer = new FileWriter("Your_Boarding_Ticket.txt");
             ticketData = "\n\t*******************" +
@@ -250,8 +250,8 @@ public class ViewController {
             writer.write(ticketData);
             writer.close();
             allTicketsGenerated.add(ticketData);
-            storeAllTicketsGenerated();  
-            switchToScene2();       
+            storeAllTicketsGenerated();
+
         } catch (IOException e) {
             System.out.println("Error occurred");
             e.printStackTrace();
@@ -260,9 +260,7 @@ public class ViewController {
 
     private static void storeAllTicketsGenerated() {
         try {
-            for (var eachTicket: allTicketsGenerated) {
-                Files.write(Paths.get("ALL_TICKETS_GENERATED.txt"), eachTicket.getBytes(), StandardOpenOption.APPEND);
-            }
+            Files.write(Paths.get("ALL_TICKETS_GENERATED.txt"), ticketData.getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -291,7 +289,7 @@ public class ViewController {
     public float applyTimeDiscount() {
         float timeDiscount = 0;
         switch((String) timeBox.getValue()) {
-            case "06:00 am" -> timeDiscount += .10;  
+            case "06:00 am" -> timeDiscount += .10;
             case "10:30 am" -> timeDiscount += .08;
             case "03:00 pm" -> timeDiscount += .06;
             case "07:30 pm" -> timeDiscount += .04;
@@ -300,11 +298,12 @@ public class ViewController {
         return timeDiscount;
     }
 
+    // Switch Statement
     public int getSubTotal() {
         int eta = Utils.findTravelTime(origin, destination);
         float x = applyTimeDiscount();
         if(eta > 350) {
-            return 225 + (int) (225 * x); 
+            return 225 + (int) (225 * x);
         } else if(eta > 300) {
             return 200 + (int) (200 * x);
         } else if (eta > 250) {
@@ -315,7 +314,8 @@ public class ViewController {
             return 125 + (int) (125 * x);
         } else if (eta > 100) {
             return 100 + (int) (100 * x);
-        } return 75+ (int) (75 * x);
+        }
+        return 75+ (int) (75 * x);
     }
 
     public int getFinalPrice() {
